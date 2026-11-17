@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus — Cinematic AI Agent Dashboard</title>
+  <meta name="description" content="A next-generation cinematic AI command center dashboard built with advanced CSS Grid, Flexbox, Glassmorphism, and keyframe animations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-dark">
+  <!-- Cinematic Ambient Background Glow Orbs -->
+  <div class="ambient-glow orb-1" aria-hidden="true"></div>
+  <div class="ambient-glow orb-2" aria-hidden="true"></div>
+  <div class="ambient-glow orb-3" aria-hidden="true"></div>
+
+  <!-- Main Application Wrapper -->
+  <div class="app-container">
+    
+    <!-- ==================== SIDEBAR NAVIGATION ==================== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-section">
+        <div class="brand-icon">
+          <div class="core-nucleus"></div>
+          <div class="orbital-ring"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">NEXUS</span>
+          <span class="brand-subtitle">AI SYNAPSE v4.8</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-group-label">NEURAL CONTROL</div>
+        <button class="nav-item active" data-tab="overview">
+          <svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+          <span>Command Center</span>
+          <span class="status-pill live-pill">LIVE</span>
+        </button>
+        <button class="nav-item" data-tab="agents">
+          <svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a5 5 0 0 0-5 5v3h18v-3a5 5 0 0 0-5-5z"/></svg>
+          <span>Active Swarms</span>
+          <span class="nav-badge">12</span>
+        </button>
+        <button class="nav-item" data-tab="telemetry">
+          <svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>Telemetry & GPU</span>
+        </button>
+        <button class="nav-item" data-tab="neural-matrix">
+          <svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Synapse Weights</span>
+        </button>
+
+        <div class="nav-group-label">SYSTEM LOGS</div>
+        <button class="nav-item" data-tab="console">
+          <svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          <span>Raw Terminal</span>
+        </button>
+        <button class="nav-item" data-tab="security">
+          <svg class="nav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Quantum Shield</span>
+          <span class="status-dot green"></span>
+        </button>
+      </nav>
+
+      <!-- Sidebar Footer Mini HUD -->
+      <div class="sidebar-footer">
+        <div class="node-profile">
+          <div class="user-avatar-glow">
+            <span class="avatar-initials">NX</span>
+            <div class="avatar-pulse-ring"></div>
+          </div>
+          <div class="user-details">
+            <span class="user-name">GRIET Autonomous Node</span>
+            <span class="user-role">Super Admin &bull; SL LAB</span>
+          </div>
+        </div>
+        <div class="cluster-load-meter">
+          <div class="load-text-row">
+            <span>Cluster Quorum</span>
+            <span class="load-percentage">94.2%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar progress-bar-cyan" style="width: 94.2%;"></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <main class="main-viewport">
+      
+      <!-- Top HUD Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="menu-toggle-btn" id="sidebarToggle" aria-label="Toggle Sidebar Navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div class="breadcrumbs">
+            <span class="crumb-root">Cluster // HYD-SOUTH-01</span>
+            <span class="crumb-separator">/</span>
+            <span class="crumb-current">Mission Control HUD</span>
+          </div>
+        </div>
+
+        <div class="header-center">
+          <div class="global-search-bar">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" placeholder="Query agent vectors, neural nodes, or memory keys (Cmd + K)..." id="agentSearchInput">
+            <kbd class="shortcut-key">&#8984;K</kbd>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="system-time-card">
+            <span class="time-label">SYNCHRONIZED MET</span>
+            <span class="live-clock" id="systemClock">00:00:00 UTC</span>
+          </div>
+
+          <div class="connection-status badge-glass">
+            <span class="beacon-pulse green"></span>
+            <span class="beacon-text">CORE ONLINE</span>
+          </div>
+
+          <button class="header-action-btn" id="openModalBtn" title="Emergency Node Override">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="7"/></svg>
+            <span>Override Protocol</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Grid Content -->
+      <div class="dashboard-scroll-canvas">
+
+        <!-- Banner Alert: Real-time Lab Mission Feed -->
+        <section class="cinematic-banner">
+          <div class="banner-glass-wrapper">
+            <div class="banner-beacon">
+              <div class="beacon-outer-radar"></div>
+              <div class="beacon-core"></div>
+            </div>
+            <div class="banner-content">
+              <div class="banner-tag">GRIET SL LAB SPECIAL DIRECTIVE &bull; MICRO-PROJECT 2026</div>
+              <h1 class="banner-title">Cinematic AI Autonomous Agent Swarm Mission Hub</h1>
+              <p class="banner-desc">
+                Real-time multi-agent consensus network active. 4 distributed LLM orchestration clusters operating at 12ms latency across quantum-verified tensor pipelines.
+              </p>
+            </div>
+            <div class="banner-actions">
+              <button class="btn-glow-primary" id="triggerSwarmScan">
+                <span class="btn-text">Initiate Swarm Scan</span>
+                <span class="btn-flare"></span>
+              </button>
+              <button class="btn-ghost" id="simulateSpikeBtn">
+                Simulate Load Spike
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- KPI Metrics Grid (Flex & Grid Hybrid) -->
+        <section class="kpi-grid">
+          
+          <!-- Metric 1: Active Neural Agents -->
+          <article class="kpi-card card-glass glow-cyan">
+            <div class="kpi-header">
+              <span class="kpi-title">ACTIVE AGENT SWARMS</span>
+              <div class="kpi-icon-wrap cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value-row">
+                <span class="kpi-number" id="metricAgents">1,024</span>
+                <span class="trend-badge trend-up">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                  +14.2%
+                </span>
+              </div>
+              <div class="kpi-footer-metric">
+                <span class="subtext">Nominal consensus reached</span>
+                <div class="sparkline-bar-group">
+                  <div class="spark-bar" style="height: 45%;"></div>
+                  <div class="spark-bar" style="height: 60%;"></div>
+                  <div class="spark-bar" style="height: 80%;"></div>
+                  <div class="spark-bar" style="height: 70%;"></div>
+                  <div class="spark-bar" style="height: 95%;"></div>
+                  <div class="spark-bar active" style="height: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Metric 2: Global Latency -->
+          <article class="kpi-card card-glass glow-violet">
+            <div class="kpi-header">
+              <span class="kpi-title">SYNAPSE PIPELINE LATENCY</span>
+              <div class="kpi-icon-wrap violet">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value-row">
+                <span class="kpi-number" id="metricLatency">11.8<small>ms</small></span>
+                <span class="trend-badge trend-good">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/></svg>
+                  -3.4ms
+                </span>
+              </div>
+              <div class="kpi-footer-metric">
+                <span class="subtext">Target: &lt; 25ms threshold</span>
+                <div class="mini-gauge-track">
+                  <div class="mini-gauge-fill" style="width: 28%;"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Metric 3: Token Ingestion Rate -->
+          <article class="kpi-card card-glass glow-amber">
+            <div class="kpi-header">
+              <span class="kpi-title">TOKEN THROUGHPUT RATE</span>
+              <div class="kpi-icon-wrap amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value-row">
+                <span class="kpi-number" id="metricThroughput">4.82<small>M</small></span>
+                <span class="metric-unit">tokens/sec</span>
+              </div>
+              <div class="kpi-footer-metric">
+                <span class="subtext">H100 Tensor Parallel x8</span>
+                <div class="pulse-indicator-line"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Metric 4: Quantum Shield Integrity -->
+          <article class="kpi-card card-glass glow-emerald">
+            <div class="kpi-header">
+              <span class="kpi-title">SECURITY QUORUM INTEGRITY</span>
+              <div class="kpi-icon-wrap emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value-row">
+                <span class="kpi-number" id="metricIntegrity">99.98<small>%</small></span>
+                <span class="status-chip chip-emerald">OPTIMAL</span>
+              </div>
+              <div class="kpi-footer-metric">
+                <span class="subtext">Zero payload compromises</span>
+                <div class="quantum-dots">
+                  <span class="q-dot active"></span>
+                  <span class="q-dot active"></span>
+                  <span class="q-dot active"></span>
+                  <span class="q-dot active"></span>
+                  <span class="q-dot active"></span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- Dynamic Main Grid (Widgets Layout) -->
+        <div class="main-widgets-grid">
+          
+          <!-- ==================== WIDGET 1: REAL-TIME CHART ==================== -->
+          <section class="widget-card card-glass chart-widget">
+            <div class="widget-header">
+              <div class="widget-title-group">
+                <div class="widget-badge-dot"></div>
+                <h2 class="widget-title">Neural Load &amp; Inference Spectrum</h2>
+                <span class="widget-subtitle">Aggregated token execution across 12-hour sliding window</span>
+              </div>
+              <div class="widget-controls">
+                <div class="time-filter-pills" role="tablist">
+                  <button class="pill active" data-time="1h">1H</button>
+                  <button class="pill" data-time="6h">6H</button>
+                  <button class="pill" data-time="12h">12H</button>
+                  <button class="pill" data-time="24h">24H</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-canvas-container">
+              <!-- Pure CSS High-Tech Bar Chart Visualization -->
+              <div class="css-chart-grid" id="barChartSpectrum">
+                <div class="chart-y-axis">
+                  <span>100%</span>
+                  <span>75%</span>
+                  <span>50%</span>
+                  <span>25%</span>
+                  <span>0%</span>
+                </div>
+                <div class="chart-bars-track">
+                  <!-- Bar 1 -->
+                  <div class="chart-col" style="--val: 45%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">08:00 &bull; 45% load</span>
+                    </div>
+                    <span class="col-label">08:00</span>
+                  </div>
+                  <!-- Bar 2 -->
+                  <div class="chart-col" style="--val: 62%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">09:00 &bull; 62% load</span>
+                    </div>
+                    <span class="col-label">09:00</span>
+                  </div>
+                  <!-- Bar 3 -->
+                  <div class="chart-col" style="--val: 78%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">10:00 &bull; 78% load</span>
+                    </div>
+                    <span class="col-label">10:00</span>
+                  </div>
+                  <!-- Bar 4 -->
+                  <div class="chart-col highlight" style="--val: 92%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">11:00 &bull; 92% Peak</span>
+                    </div>
+                    <span class="col-label">11:00</span>
+                  </div>
+                  <!-- Bar 5 -->
+                  <div class="chart-col" style="--val: 84%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">12:00 &bull; 84% load</span>
+                    </div>
+                    <span class="col-label">12:00</span>
+                  </div>
+                  <!-- Bar 6 -->
+                  <div class="chart-col" style="--val: 56%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">13:00 &bull; 56% load</span>
+                    </div>
+                    <span class="col-label">13:00</span>
+                  </div>
+                  <!-- Bar 7 -->
+                  <div class="chart-col" style="--val: 70%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">14:00 &bull; 70% load</span>
+                    </div>
+                    <span class="col-label">14:00</span>
+                  </div>
+                  <!-- Bar 8 -->
+                  <div class="chart-col" style="--val: 88%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">15:00 &bull; 88% load</span>
+                    </div>
+                    <span class="col-label">15:00</span>
+                  </div>
+                  <!-- Bar 9 -->
+                  <div class="chart-col highlight-cyan" style="--val: 95%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">16:00 &bull; 95% Swarm Peak</span>
+                    </div>
+                    <span class="col-label">16:00</span>
+                  </div>
+                  <!-- Bar 10 -->
+                  <div class="chart-col" style="--val: 81%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">17:00 &bull; 81% load</span>
+                    </div>
+                    <span class="col-label">17:00</span>
+                  </div>
+                  <!-- Bar 11 -->
+                  <div class="chart-col" style="--val: 68%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">18:00 &bull; 68% load</span>
+                    </div>
+                    <span class="col-label">18:00</span>
+                  </div>
+                  <!-- Bar 12 -->
+                  <div class="chart-col pulse-bar" style="--val: 74%;">
+                    <div class="chart-bar-fill">
+                      <div class="bar-glow"></div>
+                      <span class="bar-tooltip">NOW &bull; 74% Active</span>
+                    </div>
+                    <span class="col-label">NOW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chart Footer Metrics Strip -->
+            <div class="chart-footer-strip">
+              <div class="strip-item">
+                <span class="strip-key">Average Cycle:</span>
+                <span class="strip-val">74.5% Capacity</span>
+              </div>
+              <div class="strip-item">
+                <span class="strip-key">Thermal Index:</span>
+                <span class="strip-val green-text">42&deg;C (Optimal)</span>
+              </div>
+              <div class="strip-item">
+                <span class="strip-key">Quantization Level:</span>
+                <span class="strip-val cyan-text">FP8 High Precision</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== WIDGET 2: HARDWARE GAUGES & VRAM ==================== -->
+          <section class="widget-card card-glass gauge-widget">
+            <div class="widget-header">
+              <div class="widget-title-group">
+                <div class="widget-badge-dot purple"></div>
+                <h2 class="widget-title">Cluster Core Allocation</h2>
+                <span class="widget-subtitle">Compute node distribution &amp; H100 VRAM</span>
+              </div>
+            </div>
+
+            <div class="gauges-container">
+              <!-- Radial Meter 1: Tensor VRAM -->
+              <div class="radial-gauge-item">
+                <div class="radial-progress-wrap" style="--percent: 86;">
+                  <svg class="radial-svg" viewBox="0 0 120 120">
+                    <circle class="radial-bg" cx="60" cy="60" r="48"></circle>
+                    <circle class="radial-val radial-cyan" cx="60" cy="60" r="48"></circle>
+                  </svg>
+                  <div class="radial-center-content">
+                    <span class="radial-num">86%</span>
+                    <span class="radial-meta">VRAM</span>
+                  </div>
+                </div>
+                <div class="radial-legend">
+                  <span class="legend-title">H100 Tensor Memory</span>
+                  <span class="legend-detail">68.8 GB / 80.0 GB</span>
+                </div>
+              </div>
+
+              <!-- Radial Meter 2: Synaptic Cache -->
+              <div class="radial-gauge-item">
+                <div class="radial-progress-wrap" style="--percent: 54;">
+                  <svg class="radial-svg" viewBox="0 0 120 120">
+                    <circle class="radial-bg" cx="60" cy="60" r="48"></circle>
+                    <circle class="radial-val radial-purple" cx="60" cy="60" r="48"></circle>
+                  </svg>
+                  <div class="radial-center-content">
+                    <span class="radial-num">54%</span>
+                    <span class="radial-meta">CACHE</span>
+                  </div>
+                </div>
+                <div class="radial-legend">
+                  <span class="legend-title">KV Attention Cache</span>
+                  <span class="legend-detail">2.7 TB Indexed</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Memory Allocation Breakdown List -->
+            <div class="resource-breakdown">
+              <div class="resource-row">
+                <span class="resource-label">Agent Embeddings Store</span>
+                <span class="resource-val">34.2 GB</span>
+                <div class="resource-bar-wrap">
+                  <div class="resource-bar-fill" style="width: 48%; background: var(--accent-cyan);"></div>
+                </div>
+              </div>
+              <div class="resource-row">
+                <span class="resource-label">Dynamic Working Memory</span>
+                <span class="resource-val">22.8 GB</span>
+                <div class="resource-bar-wrap">
+                  <div class="resource-bar-fill" style="width: 32%; background: var(--accent-violet);"></div>
+                </div>
+              </div>
+              <div class="resource-row">
+                <span class="resource-label">Zero-Knowledge Sandbox</span>
+                <span class="resource-val">11.8 GB</span>
+                <div class="resource-bar-wrap">
+                  <div class="resource-bar-fill" style="width: 16%; background: var(--accent-emerald);"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== WIDGET 3: LIVE AGENT SWARM CARDS ==================== -->
+          <section class="widget-card card-glass swarm-widget">
+            <div class="widget-header">
+              <div class="widget-title-group">
+                <div class="widget-badge-dot emerald"></div>
+                <h2 class="widget-title">Active AI Agent Swarms</h2>
+                <span class="widget-subtitle">Autonomous task routing and thread states</span>
+              </div>
+              <div class="agent-count-badge">4 Online</div>
+            </div>
+
+            <div class="agent-cards-list">
+              <!-- Agent 1 -->
+              <div class="agent-card">
+                <div class="agent-avatar-status">
+                  <div class="agent-icon-box cyan-border">
+                    <span class="agent-code">AE</span>
+                  </div>
+                  <span class="beacon-pulse green"></span>
+                </div>
+                <div class="agent-info-block">
+                  <div class="agent-primary-row">
+                    <span class="agent-name">Agent AETHER</span>
+                    <span class="agent-status-tag status-executing">SYNTHESIZING</span>
+                  </div>
+                  <p class="agent-task">Processing parallel recursive tree-search over multi-hop database queries.</p>
+                  <div class="agent-metrics-row">
+                    <span class="m-pill">Model: Claude 3.5 Sonnet</span>
+                    <span class="m-pill">Tokens: 32.4k/s</span>
+                    <span class="m-pill success">Accuracy: 99.4%</span>
+                  </div>
+                </div>
+                <div class="agent-action-col">
+                  <button class="icon-circle-btn" title="Inspect Telemetry">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Agent 2 -->
+              <div class="agent-card">
+                <div class="agent-avatar-status">
+                  <div class="agent-icon-box violet-border">
+                    <span class="agent-code">CH</span>
+                  </div>
+                  <span class="beacon-pulse green"></span>
+                </div>
+                <div class="agent-info-block">
+                  <div class="agent-primary-row">
+                    <span class="agent-name">Agent CHRONOS</span>
+                    <span class="agent-status-tag status-active">ANALYZING LOGS</span>
+                  </div>
+                  <p class="agent-task">Anomaly surveillance across 200+ Kubernetes cluster nodes in Hyderabad VPC.</p>
+                  <div class="agent-metrics-row">
+                    <span class="m-pill">Model: DeepSeek V3</span>
+                    <span class="m-pill">Threads: 64 Core</span>
+                    <span class="m-pill">Latency: 8.2ms</span>
+                  </div>
+                </div>
+                <div class="agent-action-col">
+                  <button class="icon-circle-btn" title="Inspect Telemetry">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Agent 3 -->
+              <div class="agent-card">
+                <div class="agent-avatar-status">
+                  <div class="agent-icon-box amber-border">
+                    <span class="agent-code">VK</span>
+                  </div>
+                  <span class="beacon-pulse amber"></span>
+                </div>
+                <div class="agent-info-block">
+                  <div class="agent-primary-row">
+                    <span class="agent-name">Agent VALKYRIE</span>
+                    <span class="agent-status-tag status-standby">STANDBY QUORUM</span>
+                  </div>
+                  <p class="agent-task">Automated penetration defense &amp; zero-day prompt injection sanitizer.</p>
+                  <div class="agent-metrics-row">
+                    <span class="m-pill">Model: Gemini 1.5 Pro</span>
+                    <span class="m-pill">State: Passive Shield</span>
+                    <span class="m-pill amber-text">Threats Blocked: 412</span>
+                  </div>
+                </div>
+                <div class="agent-action-col">
+                  <button class="icon-circle-btn" title="Inspect Telemetry">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Agent 4 -->
+              <div class="agent-card">
+                <div class="agent-avatar-status">
+                  <div class="agent-icon-box pink-border">
+                    <span class="agent-code">EC</span>
+                  </div>
+                  <span class="beacon-pulse green"></span>
+                </div>
+                <div class="agent-info-block">
+                  <div class="agent-primary-row">
+                    <span class="agent-name">Agent ECHO</span>
+                    <span class="agent-status-tag status-executing">DISTRIBUTING</span>
+                  </div>
+                  <p class="agent-task">Broadcasting vector state updates across all peer edge nodes in real time.</p>
+                  <div class="agent-metrics-row">
+                    <span class="m-pill">Model: Llama 3.3 70B</span>
+                    <span class="m-pill">Sync: 99.9%</span>
+                    <span class="m-pill">Queue: 0 pending</span>
+                  </div>
+                </div>
+                <div class="agent-action-col">
+                  <button class="icon-circle-btn" title="Inspect Telemetry">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== WIDGET 4: CINEMATIC TERMINAL CONSOLE ==================== -->
+          <section class="widget-card card-glass terminal-widget">
+            <div class="terminal-header">
+              <div class="terminal-controls">
+                <span class="control-dot dot-red" id="termClose"></span>
+                <span class="control-dot dot-yellow" id="termMinimize"></span>
+                <span class="control-dot dot-green" id="termMaximize"></span>
+              </div>
+              <div class="terminal-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                <span>nexus-core-stream@griet-cluster: ~ /sl-lab/telemetry</span>
+              </div>
+              <div class="terminal-badge">STDOUT LIVE</div>
+            </div>
+
+            <!-- Terminal Output Log Container -->
+            <div class="terminal-body" id="terminalLogs" tabindex="0" role="region" aria-label="Terminal output stream">
+              <div class="log-line log-system">
+                <span class="timestamp">[19:07:01]</span>
+                <span class="prefix">SYS_INIT:</span>
+                <span class="msg">Nexus Autonomous Agent Engine initialized on GRIET campus backbone.</span>
+              </div>
+              <div class="log-line log-info">
+                <span class="timestamp">[19:07:02]</span>
+                <span class="prefix">AUTH_OK:</span>
+                <span class="msg">Zero-Trust mutual TLS handshakes verified for 4 sub-agent clusters.</span>
+              </div>
+              <div class="log-line log-warn">
+                <span class="timestamp">[19:07:03]</span>
+                <span class="prefix">VECTOR_SYNC:</span>
+                <span class="msg">High density embedding shift detected in Node 3. Auto-balancing load...</span>
+              </div>
+              <div class="log-line log-success">
+                <span class="timestamp">[19:07:04]</span>
+                <span class="prefix">SWARM_CONSENSUS:</span>
+                <span class="msg">Byzantine fault tolerance confirmed at quorum 99.8%. Ready for prompts.</span>
+              </div>
+              <div class="log-line log-cyan">
+                <span class="timestamp">[19:07:05]</span>
+                <span class="prefix">INFERENCE:</span>
+                <span class="msg">Running dynamic heuristic solver: Batch token size = 8,192 tensors.</span>
+              </div>
+            </div>
+
+            <!-- Interactive Terminal Prompt Input -->
+            <div class="terminal-input-bar">
+              <span class="prompt-symbol">nexus://agent-shell &gt;</span>
+              <input type="text" id="terminalInput" placeholder="Type 'help', 'status', 'scan', 'purge', or 'clear'..." autocomplete="off" spellcheck="false">
+              <button class="terminal-run-btn" id="runCommandBtn">EXECUTE</button>
+            </div>
+          </section>
+
+          <!-- ==================== WIDGET 5: NEURAL MATRIX & TOPOLOGY ==================== -->
+          <section class="widget-card card-glass topology-widget">
+            <div class="widget-header">
+              <div class="widget-title-group">
+                <div class="widget-badge-dot amber"></div>
+                <h2 class="widget-title">Cluster Synapse Topology</h2>
+                <span class="widget-subtitle">Inter-node mesh connectivity matrix</span>
+              </div>
+            </div>
+
+            <!-- Neural Grid Visual Matrix -->
+            <div class="matrix-grid-visual">
+              <div class="matrix-node active-pulse" title="Node Alpha - Primary Orchestrator">
+                <span class="node-id">α-01</span>
+                <span class="node-status">100%</span>
+              </div>
+              <div class="matrix-node active-pulse" title="Node Beta - Vector Cache">
+                <span class="node-id">β-02</span>
+                <span class="node-status">98%</span>
+              </div>
+              <div class="matrix-node active-pulse" title="Node Gamma - Tensor Engine">
+                <span class="node-id">γ-03</span>
+                <span class="node-status">94%</span>
+              </div>
+              <div class="matrix-node active-pulse" title="Node Delta - Deep Storage">
+                <span class="node-id">δ-04</span>
+                <span class="node-status">99%</span>
+              </div>
+              <div class="matrix-node active-pulse" title="Node Epsilon - Firewall">
+                <span class="node-id">ε-05</span>
+                <span class="node-status">92%</span>
+              </div>
+              <div class="matrix-node highlight-cyan active-pulse" title="Node Zeta - Routing">
+                <span class="node-id">ζ-06</span>
+                <span class="node-status">97%</span>
+              </div>
+              <div class="matrix-node active-pulse" title="Node Eta - Inference Engine">
+                <span class="node-id">η-07</span>
+                <span class="node-status">95%</span>
+              </div>
+              <div class="matrix-node active-pulse" title="Node Theta - Edge Gateway">
+                <span class="node-id">θ-08</span>
+                <span class="node-status">96%</span>
+              </div>
+            </div>
+
+            <!-- Interconnect Soundwave / Audio-frequency Visualizer Simulator -->
+            <div class="audio-freq-spectrum">
+              <div class="spectrum-bar bar-1"></div>
+              <div class="spectrum-bar bar-2"></div>
+              <div class="spectrum-bar bar-3"></div>
+              <div class="spectrum-bar bar-4"></div>
+              <div class="spectrum-bar bar-5"></div>
+              <div class="spectrum-bar bar-6"></div>
+              <div class="spectrum-bar bar-7"></div>
+              <div class="spectrum-bar bar-8"></div>
+              <div class="spectrum-bar bar-9"></div>
+              <div class="spectrum-bar bar-10"></div>
+              <div class="spectrum-bar bar-11"></div>
+              <div class="spectrum-bar bar-12"></div>
+              <div class="spectrum-bar bar-13"></div>
+              <div class="spectrum-bar bar-14"></div>
+              <div class="spectrum-bar bar-15"></div>
+              <div class="spectrum-bar bar-16"></div>
+            </div>
+
+            <div class="topology-meta">
+              <div class="mesh-stat">
+                <span class="mesh-label">Topology Mesh:</span>
+                <span class="mesh-val">Zero-Loss Torus 8D</span>
+              </div>
+              <div class="mesh-stat">
+                <span class="mesh-label">Interconnect Bandwidth:</span>
+                <span class="mesh-val cyan-text">3.2 Tbps InfiniBand</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== WIDGET 6: QUICK COMMAND ACTIONS ==================== -->
+          <section class="widget-card card-glass quick-actions-widget">
+            <div class="widget-header">
+              <div class="widget-title-group">
+                <div class="widget-badge-dot cyan"></div>
+                <h2 class="widget-title">Autonomous Action Hub</h2>
+                <span class="widget-subtitle">Trigger rapid orchestration pipelines</span>
+              </div>
+            </div>
+
+            <div class="action-buttons-grid">
+              <button class="action-tile-btn" id="btnDeploySwarm">
+                <div class="tile-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Deploy Sub-Swarm</span>
+                  <span class="tile-desc">Instantiate 64 worker threads</span>
+                </div>
+              </button>
+
+              <button class="action-tile-btn" id="btnPurgeContext">
+                <div class="tile-icon-box orange">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Flush KV Attention</span>
+                  <span class="tile-desc">Clear stale context windows</span>
+                </div>
+              </button>
+
+              <button class="action-tile-btn" id="btnQuantumSync">
+                <div class="tile-icon-box purple">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Re-Index Weights</span>
+                  <span class="tile-desc">Recompute LoRA adapter layers</span>
+                </div>
+              </button>
+
+              <button class="action-tile-btn danger-tile" id="btnEmergencyHalt">
+                <div class="tile-icon-box red">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+                </div>
+                <div class="tile-text">
+                  <span class="tile-title">Emergency Pause</span>
+                  <span class="tile-desc">Halt non-critical agent execution</span>
+                </div>
+              </button>
+            </div>
+          </section>
+
+        </div> <!-- /main-widgets-grid -->
+
+      </div> <!-- /dashboard-scroll-canvas -->
+    </main>
+
+  </div> <!-- /app-container -->
+
+  <!-- ==================== OVERLAY MODAL: NODE OVERRIDE PROTOCOL ==================== -->
+  <div class="modal-backdrop" id="overrideModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-dialog card-glass glow-cyan">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-warning-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 22 22 22 12 2"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div>
+            <h3 class="modal-title" id="modalTitle">Cluster Override Protocol</h3>
+            <p class="modal-subtitle">GRIET Autonomous Lab Node Elevation &bull; Level-4 Clearance</p>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeModalBtn" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-intro">
+          Executing this override directs all distributed swarms to halt current recursive branches and synchronize directly with the local command console.
+        </p>
+
+        <div class="override-options-group">
+          <label class="custom-radio-row">
+            <input type="radio" name="overrideMode" value="soft" checked>
+            <div class="radio-details">
+              <span class="radio-label">Soft Checkpoint &amp; Synchronize</span>
+              <span class="radio-sub">Gracefully commits current chain-of-thought to episodic memory.</span>
+            </div>
+          </label>
+          <label class="custom-radio-row">
+            <input type="radio" name="overrideMode" value="deep">
+            <div class="radio-details">
+              <span class="radio-label">Deep Re-Quantization (FP16 to FP4)</span>
+              <span class="radio-sub">Shrinks memory footprint by 65% for heavy load resilience.</span>
+            </div>
+          </label>
+          <label class="custom-radio-row">
+            <input type="radio" name="overrideMode" value="failover">
+            <div class="radio-details">
+              <span class="radio-label">Trigger Hyderabad Secondary Failover</span>
+              <span class="radio-sub">Redirects network routes to backup tertiary cluster.</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="modal-slider-row">
+          <div class="slider-header">
+            <span>Inference Throttle Level</span>
+            <span class="slider-val" id="throttleValueDisplay">85%</span>
+          </div>
+          <input type="range" min="10" max="100" value="85" class="custom-slider" id="throttleSlider">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-ghost" id="cancelModalBtn">Abort Override</button>
+        <button class="btn-glow-primary" id="confirmOverrideBtn">
+          <span>Apply Protocol Elevation</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Minimal Vanilla JavaScript for Interactive Enhancements -->
+  <script src="script.js"></script>
+</body>
+</html>
