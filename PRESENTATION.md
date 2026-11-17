@@ -1,4 +1,4 @@
-# FOCUSFLOW: A MINIMALIST STUDENT TASK TRACKER UI
+# FOCUSFLOW: A FUNCTIONAL STUDENT TASK TRACKER UI
 ## 10-Slide Presentation Text & Oral Viva Script
 **Course:** Scripting Languages Laboratory (SL LAB GLOB)  
 **Institution:** Gokaraju Rangaraju Institute of Engineering and Technology (GRIET)
@@ -6,8 +6,8 @@
 ---
 
 ### SLIDE 1: Title & Team Details
-- **Slide Title:** FocusFlow: A Minimalist Student Task Tracker UI
-- **Subtitle:** A Micro-Project on Semantic HTML5 & CSS3 Flexbox
+- **Slide Title:** FocusFlow: A Functional Student Task Tracker UI
+- **Subtitle:** An Interactive Micro-Project on HTML5, CSS3 Flexbox & Vanilla JavaScript
 - **Course & Department:** 
   - Scripting Languages Laboratory (SL LAB)
   - Department of Computer Science and Engineering / Information Technology
@@ -17,177 +17,185 @@
   - Roll Number: *[Your GRIET Roll Number, e.g., 22241A05XX]*
   - Academic Year: 2025 – 2026
 - **Faculty Supervisor / Lab In-Charge:** *[Faculty Name / Lab Coordinator]*
-- **Slide Layout & Visuals:** Clean white/light-grey background with a blue accent banner representing a clean student study planner.
+- **Slide Layout & Visuals:** Clean light-grey background with a blue accent card representing an interactive student study planner.
 
 > **Speaker Notes (Viva Script):**
-> "Good morning respected faculty and evaluators. Today I am presenting my micro-project for the Scripting Languages Laboratory titled 'FocusFlow: A Minimalist Student Task Tracker UI'. This project focuses on building a clean, responsive daily task management and study timer interface using pure HTML5 and CSS3."
+> "Good morning respected faculty and evaluators. Today I am presenting my micro-project for the Scripting Languages Laboratory titled 'FocusFlow: A Functional Student Task Tracker UI'. This project is a 100% working interactive application combining semantic HTML5, CSS3 Flexbox, and concise Vanilla JavaScript."
 
 ---
 
 ### SLIDE 2: Introduction to FocusFlow
 - **Slide Title:** Introduction to FocusFlow
 - **Bullet Points:**
-  - **What is FocusFlow?** A clean, distraction-free web dashboard designed specifically for college students to track assignments, lab records, and study blocks.
-  - **Physical Notepad Aesthetic:** Designed to feel like a digital study notebook, utilizing a clean centered card layout with gentle borders and soft shadows.
-  - **Core Student Modules:**
-    - Static Pomodoro Focus Timer (25:00 focus intervals).
-    - Quick Task Add Form.
-    - Category Filter Tabs (*All*, *Pending*, *Completed*).
-    - Structured Task List with subject tags and priority badges.
-    - Visual Daily Study Completion Progress Bar.
-- **Slide Layout & Visuals:** Screenshot of the FocusFlow interface centered with bullet points on the side.
+  - **What is FocusFlow?** A lightweight, interactive web application built to help college students track daily assignments and conduct focused 25-minute study sessions.
+  - **100% Functional Features:**
+    - Live countdown Pomodoro Study Timer (Start, Pause, Reset).
+    - Dynamic task addition via form input (without page refresh).
+    - Interactive completion checkboxes with strikethrough styling.
+    - Instant task deletion with automatic counter and progress updates.
+    - Category filter tabs (*All*, *Pending*, *Completed*).
+  - **Simplicity & Speed:** Zero third-party libraries, pure native code that runs instantly in any browser.
+- **Slide Layout & Visuals:** Screenshot of the FocusFlow interface centered with bullet points outlining the 5 functional components.
 
 > **Speaker Notes (Viva Script):**
-> "As engineering students, we have to juggle multiple subjects, lab deadlines, and exam preparation every single day. FocusFlow was created to provide a distraction-free digital notepad where students can clearly view their daily academic tasks alongside a dedicated focus timer block."
+> "FocusFlow solves the daily challenge of tracking multiple engineering assignments and lab records. Unlike static mockups, every feature in FocusFlow works: the timer ticks down, new tasks can be added, checkboxes strike through finished tasks, delete buttons remove items, and the progress bar calculates completion in real time."
 
 ---
 
 ### SLIDE 3: Problem Description
 - **Slide Title:** Problem Description
-- **Subtitle:** The Challenge of College Task Management
+- **Subtitle:** Task Overload & Study Distractions
 - **Bullet Points:**
-  - **Scattered Deadlines:** Assignments and lab tasks are often noted in various rough notebooks, WhatsApp groups, or lost sticky notes.
-  - **Overcomplicated Commercial Apps:** Most online to-do apps are overloaded with complex settings, mandatory account logins, advertisements, and excessive features that waste time.
-  - **Lack of Study Time Boxing:** Students struggle to dedicate uninterrupted focus blocks to individual subjects like Scripting Languages or DBMS.
-  - **Our Solution:** A lightweight, instant-loading front-end interface built purely with standard HTML5 and CSS3 that opens locally in any browser with zero setup.
-- **Slide Layout & Visuals:** Split-column comparison showing "Common Student Struggles" versus "FocusFlow's Simple Approach".
+  - **Scattered Deadlines:** Lab records and assignments for multiple subjects (SL Lab, OS, DBMS) are often lost across multiple notebooks and chat groups.
+  - **Commercial App Bloat:** Popular task apps are filled with complex settings, advertisements, account logins, and unnecessary features.
+  - **Lack of Dedicated Focus:** Students multitask without structured time blocks, resulting in study fatigue.
+  - **Our Solution:** A single-page, distraction-free study notepad that opens locally in seconds and provides immediate feedback.
+- **Slide Layout & Visuals:** Comparison table showing "Commercial Apps (Heavy, Slow, Distracting)" vs. "FocusFlow (Instant, Simple, 100% Functional)".
 
 > **Speaker Notes (Viva Script):**
-> "The problem we addressed is simple yet widespread: students often lose track of lab records and assignments because they are scattered. Many commercial apps are too complicated for quick daily use. FocusFlow demonstrates that a straightforward, well-styled web page can provide an effective, immediate solution."
+> "In college, we often lose track of lab deadlines because they are scattered. Many commercial apps are too complicated for quick daily use. FocusFlow gives students a single, clean screen with an integrated study timer and an instant checklist."
 
 ---
 
 ### SLIDE 4: Objectives
 - **Slide Title:** Project Objectives
 - **Bullet Points:**
-  - **Master Semantic HTML5 Structure:** Implement meaningful tags like `<header>`, `<main>`, `<section>`, `<ul>`, `<li>`, and `<form>` instead of generic `<div>` tags.
-  - **Apply the CSS Box Model:** Practice precise use of padding, margins, borders, and border-radius to create an organized notepad feel.
-  - **Master One-Dimensional CSS Flexbox:** Use `display: flex`, `justify-content`, and `align-items` to align buttons, checkboxes, and task details cleanly.
-  - **Build a Responsive Layout:** Ensure the interface looks great on both wide laptop screens and mobile phones using media queries.
-  - **Maintain Clean, Commented Code:** Write readable, human-styled CSS so every style rule can be clearly explained during laboratory evaluation.
-- **Slide Layout & Visuals:** Four icon cards representing Structure (HTML5), Styling (CSS3), Layout (Flexbox), and Responsiveness (Mobile).
+  - **Semantic HTML5 Markup:** Utilize standard tags (`<header>`, `<main>`, `<section>`, `<ul>`, `<li>`, `<form>`) for clean, accessible document structure.
+  - **CSS Box Model & Flexbox:** Apply clean padding, borders, and `display: flex` with `justify-content: space-between` for consistent horizontal alignment.
+  - **Short, Explainable JavaScript:** Write concise, modular JavaScript under 100 lines for:
+    - Timer countdowns using `setInterval()`.
+    - Dynamic DOM manipulation using `createElement()` and `appendChild()`.
+    - Event delegation for efficient item deletion and state toggling.
+  - **Responsive Design:** Ensure complete usability on desktop monitors and mobile screens using media queries.
+- **Slide Layout & Visuals:** Four numbered cards representing Structure, Layout, Interactivity, and Responsiveness.
 
 > **Speaker Notes (Viva Script):**
-> "The academic objective of this micro-project was to gain practical, hands-on mastery of fundamental web standards. We specifically aimed to understand semantic HTML markup and master CSS Flexbox for aligning components without resorting to outdated floats or complex third-party frameworks."
+> "Our objective was to practice the complete triad of web scripting—HTML for structure, CSS for layout, and JavaScript for interactivity. We specifically prioritized short, readable code so that every function could be easily explained in an academic viva."
 
 ---
 
 ### SLIDE 5: Expected Outcomes
 - **Slide Title:** Expected Outcomes
 - **Bullet Points:**
-  - **A Fully Functional Static UI Model:** A lightweight working interface that loads instantly in any standard browser (Chrome, Edge, Firefox).
-  - **Clear Visual Distinction of Tasks:**
-    - Pending tasks displayed cleanly with subject tags (`SL Lab`, `Web Tech`) and priority badges (`High Priority`, `Medium`).
-    - Completed tasks styled with subtle strikethrough text and green 'Done' badges.
-  - **Intuitive Visual Hierarchy:** Easy-to-read typography and consistent spacing that guides the student's eyes naturally from the timer to the task checklist.
-  - **Zero External Dependencies:** 100% native code that requires no Node.js, no build steps, and no internet connection to render.
-- **Slide Layout & Visuals:** Showcase of the clean UI features: Timer Card, Add Task Row, Checklist, and Progress Bar.
+  - **A Fully Interactive Working Model:**
+    - Timer counts down smoothly from 25:00 to 00:00 with Start, Pause, and Reset controls.
+    - Adding a task updates the checklist instantly.
+    - Checking a task toggles strikethrough text and switches status to "Done".
+    - Deleting a task smoothly updates the list.
+    - Live progress bar dynamically calculates:
+      $$\text{Percentage} = \left(\frac{\text{Completed}}{\text{Total}}\right) \times 100\%$$
+  - **Clean Code Architecture:** Separate `index.html`, `styles.css`, and `script.js` files with zero external dependencies.
+- **Slide Layout & Visuals:** Showcase diagram highlighting the 5 interactive user touchpoints.
 
 > **Speaker Notes (Viva Script):**
-> "The expected outcome is a polished, lightweight web dashboard. The resulting UI is clean, intuitive, and works out-of-the-box on any computer. The visual tags and strikethrough styling give students an immediate sense of organization and progress."
+> "The expected outcome is a fully functional web dashboard. The timer ticks accurately, new tasks appear immediately upon pressing Enter, and the progress bar adjusts smoothly whenever tasks are checked or deleted."
 
 ---
 
 ### SLIDE 6: Algorithm
-- **Slide Title:** Layout & Rendering Algorithm
+- **Slide Title:** System Algorithm & Logic Flow
 - **Bullet Points:**
-  - **Step 1:** Establish document structure with HTML5 doctype, meta tags, and external CSS link.
-  - **Step 2:** Reset default browser margins/padding and set global `box-sizing: border-box`.
-  - **Step 3:** Use Flexbox on the `<body>` to center the `.notepad-container` on a soft grey background (`#f4f6f9`).
-  - **Step 4:** Construct the `<header>` with flex alignment to place the title on the left and the GRIET badge on the right.
-  - **Step 5:** Build the timer block, add-task form, and filter bar using flex containers with designated `gap` values.
-  - **Step 6:** Render the task list (`<ul>`) where each list item (`<li>`) uses `justify-content: space-between` to separate task titles from action buttons.
-  - **Step 7:** Apply responsive media queries (`@media (max-width: 600px)`) to gracefully stack elements on mobile screens.
-- **Slide Layout & Visuals:** Step-by-step flowchart graphic illustrating the sequence from document reset to responsive rendering.
+  - **1. Timer Logic:**
+    - `timeLeft = 25 * 60` (1500 seconds).
+    - `setInterval` decrements `timeLeft` by 1 every 1000ms.
+    - Converts seconds into `MM:SS` format using `.padStart(2, '0')`.
+  - **2. Task Addition Logic:**
+    - Intercept form submit using `e.preventDefault()`.
+    - Create `<li>` element using `document.createElement()`.
+    - Append to `#taskList` and call `updateProgress()`.
+  - **3. Event Delegation for Delete & Check:**
+    - Attach listener to `#taskList` parent.
+    - Checkbox click: toggle class `task-completed`.
+    - Delete button click: call `e.target.closest('.task-item').remove()`.
+  - **4. Progress Calculation:**
+    - Count total `<li>` items and checked checkboxes.
+    - Set `progressBarFill.style.width` and update text counter.
+- **Slide Layout & Visuals:** Flowchart diagram showing the event listeners and DOM update pathways.
 
 > **Speaker Notes (Viva Script):**
-> "Here is the algorithmic sequence of our design. We begin with a clean box-sizing reset, use Flexbox to center our notepad container, build our semantic sections, align our task items using space-between flex distribution, and finish with a responsive media query for mobile screens."
+> "Here is our algorithmic workflow. When the user interacts with the app, JavaScript listens for events: the timer decrements seconds with setInterval, the form appends a new list item, and our event delegation listener removes items and triggers the updateProgress function."
 
 ---
 
 ### SLIDE 7: Core Technologies
 - **Slide Title:** Core Technologies Used
 - **Bullet Points:**
-  - **HTML5 (Structure):**
+  - **HTML5:**
     - Semantic elements: `<header>`, `<main>`, `<section>`, `<ul>`, `<li>`, `<footer>`.
-    - Form controls: `<input type="text">`, `<input type="checkbox">`, `<button>`.
-    - Accessible labels: `<label for="...">` for easy checkbox toggling.
-  - **CSS3 (Styling & Layout):**
-    - CSS Box Model: `padding`, `margin`, `border-radius`, `border`.
-    - CSS Flexbox: `display: flex`, `justify-content`, `align-items`, `gap`.
-    - Modern color scheme: Clean slate (`#2c3e50`), study blue (`#3182ce`), and neutral greys.
-    - Media Queries: `@media (max-width: 600px)` for mobile responsiveness.
-- **Slide Layout & Visuals:** HTML5 and CSS3 logos side by side with their primary roles outlined.
+    - Standard form controls: `<input type="text">`, `<input type="checkbox">`, `<button>`.
+  - **CSS3:**
+    - Layout: CSS Flexbox (`display: flex`, `justify-content: space-between`, `align-items: center`).
+    - Box Model: `box-sizing: border-box`, clean padding, and subtle shadows.
+    - Mobile responsiveness: `@media (max-width: 600px)`.
+  - **Vanilla JavaScript:**
+    - Timers: `setInterval()` and `clearInterval()`.
+    - DOM Manipulation: `createElement()`, `appendChild()`, `remove()`.
+    - Event Handling: Event delegation and `e.preventDefault()`.
+- **Slide Layout & Visuals:** HTML5, CSS3, and JavaScript logos displayed side-by-side with concise descriptions.
 
 > **Speaker Notes (Viva Script):**
-> "Our technology stack relies strictly on standard HTML5 and CSS3. We intentionally avoided heavy frameworks to demonstrate that clean semantic markup and modern CSS Flexbox are more than capable of creating production-quality user interfaces on their own."
+> "Our application uses 100% native web technologies. HTML5 provides semantic ontology, CSS3 Flexbox handles the fluid notepad layout, and Vanilla JavaScript manages the live countdown timer and DOM updates without any external frameworks."
 
 ---
 
-### SLIDE 8: Key Code Snippet
-- **Slide Title:** Key Code Snippet
-- **Subtitle:** Semantic HTML List & Flexbox Styling
-- **HTML Snippet:**
-```html
-<li class="task-item">
-  <div class="task-left">
-    <input type="checkbox" id="task1" class="task-checkbox">
-    <label for="task1" class="task-title">Complete SL Lab Micro Project</label>
-  </div>
-  <div class="task-right">
-    <span class="tag tag-sl">SL Lab</span>
-    <span class="tag tag-priority-high">High Priority</span>
-    <button class="delete-btn">&times;</button>
-  </div>
-</li>
+### SLIDE 8: Key Code Snippets (Easy to Explain)
+- **Slide Title:** Key Code Snippets
+- **Snippet 1: Starting the Timer (`script.js`)**
+```javascript
+// Starts countdown every 1 second (1000ms)
+startBtn.addEventListener("click", () => {
+  if (timerId !== null) return;
+  timerId = setInterval(() => {
+    timeLeft--;
+    updateTimerDisplay();
+  }, 1000);
+});
 ```
-- **CSS Snippet:**
-```css
-/* Flexbox aligns left and right sections smoothly */
-.task-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 14px;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
+- **Snippet 2: Dynamic Progress Calculation (`script.js`)**
+```javascript
+function updateProgress() {
+  const total = taskList.querySelectorAll(".task-item").length;
+  const completed = taskList.querySelectorAll(".task-checkbox:checked").length;
+  const percent = total === 0 ? 0 : Math.round((completed / total) * 100);
+  progressBarFill.style.width = percent + "%";
+  progressPercent.textContent = percent + "%";
 }
 ```
-- **Slide Layout & Visuals:** Two clean, syntax-highlighted code boxes with simple callout notes pointing to `display: flex` and `justify-content: space-between`.
+- **Slide Layout & Visuals:** Two clean, syntax-highlighted code panels with annotations for viva explanation.
 
 > **Speaker Notes (Viva Script):**
-> "This slide highlights our core implementation. In the HTML snippet, you can see how each task item is grouped into a left block for the checkbox and title, and a right block for tags and buttons. In the CSS snippet, setting 'display: flex' and 'justify-content: space-between' automatically pushes the content to opposite ends with perfect vertical centering."
+> "These two snippets demonstrate how simple the code is. Snippet 1 starts the timer using setInterval and decrements timeLeft every second. Snippet 2 counts total tasks and checked checkboxes, computes the percentage, and updates the progress bar width in two simple lines."
 
 ---
 
-### SLIDE 9: Output / Visuals
-- **Slide Title:** Output & Visual Verification
+### SLIDE 9: Output & Visuals
+- **Slide Title:** Project Output & Visual Verification
 - **Visual Display Slots:**
-  - **Panel 1 (Desktop View):** Full view of the centered FocusFlow notepad UI with timer, task list, and 40% progress bar.
-  - **Panel 2 (Task List Detail):** Close-up view highlighting pending tasks vs. completed tasks with strikethrough text and green badges.
-  - **Panel 3 (Mobile Responsive View):** Screenshot showing how task rows neatly stack vertically on a narrow screen.
-- **Slide Layout & Visuals:** A 3-box screenshot gallery layout with labels: "Desktop View", "Task Details", and "Mobile View".
+  - **Panel 1 (Active Study Session):** View showing the timer actively counting down (e.g., 24:32) with Start/Pause controls.
+  - **Panel 2 (Dynamic Tasks & Filters):** View showing newly added tasks, strikethrough styling for completed tasks, and filter tabs in action.
+  - **Panel 3 (Live Progress Bar & Mobile View):** View showing the progress bar fill updated to 60% alongside the responsive mobile layout.
+- **Slide Layout & Visuals:** A 3-screenshot display gallery with descriptive captions.
 
 > **Speaker Notes (Viva Script):**
-> "Slide 9 presents our actual visual output. As seen in the screenshots, the desktop view provides a calm, centered notepad layout. The close-up view demonstrates our clear strikethrough styling for finished assignments, while the third panel confirms that the layout adapts cleanly to smartphone screens."
+> "Slide 9 displays the rendered output. In Panel 1, you can see the active countdown timer. In Panel 2, tasks are dynamically added and checked off with clean strikethrough formatting. In Panel 3, the progress bar and counter automatically synchronize with the completed tasks."
 
 ---
 
 ### SLIDE 10: Conclusion & Questions
-- **Slide Title:** Conclusion & Future Work
+- **Slide Title:** Conclusion & Viva Q&A
 - **Summary Points:**
-  - **Micro-Project Success:** Successfully created a clean, responsive student task tracker UI using only core HTML5 and CSS3.
-  - **Learning Outcomes:** Developed a strong understanding of semantic document structuring, the CSS Box Model, and Flexbox layouts.
-  - **Future Roadmap:**
-    - Adding JavaScript to make the 25:00 countdown timer tick down interactively.
-    - Adding dynamic task addition and deletion using the DOM API.
-    - Saving tasks to browser `localStorage` so they persist across refreshes.
-- **Concluding Line:** 
-  - *"Thank you for your time and guidance."*
-  - *"Questions & Feedback are welcome!"*
-- **Slide Layout & Visuals:** Thank You graphic with GRIET college crest and student contact details.
+  - **Project Realized:** Built a 100% functional, responsive student task tracker and Pomodoro timer.
+  - **Pedagogical Takeaways:**
+    - Semantic HTML5 structure.
+    - One-dimensional CSS Flexbox alignments.
+    - Clean DOM manipulation and event delegation in JavaScript.
+  - **Code Quality:** Short, highly readable, and thoroughly commented for easy viva explanations.
+- **Closing Remarks:**
+  - *"Thank you for your valuable guidance."*
+  - *"Ready for live demonstration and questions!"*
+- **Slide Layout & Visuals:** Centered Thank You card with GRIET college crest and student details.
 
 > **Speaker Notes (Viva Script):**
-> "In conclusion, FocusFlow demonstrates that solid fundamentals in HTML and CSS are all that's needed to build useful, attractive web interfaces. In the future, we plan to add JavaScript to make the timer functional and persist tasks in local storage. Thank you, and I look forward to your questions."
+> "In conclusion, FocusFlow demonstrates that short, clean, and well-structured code can build a fully operational, responsive web application. I am ready to demonstrate the live application and answer any questions from the evaluators. Thank you!"
 
 ---

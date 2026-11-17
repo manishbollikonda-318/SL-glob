@@ -1,125 +1,100 @@
 /* ==========================================================================
-   FocusFlow: Minimalist Student Task Tracker UI
-   Course: Scripting Languages Lab (SL LAB)
-   College: Gokaraju Rangaraju Institute of Engineering and Technology (GRIET)
+   FocusFlow: Minimalist Student Task Tracker
+   Clean, easy-to-explain CSS using standard Flexbox
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. GLOBAL RESET & BASE STYLES
-   - Setting box-sizing to border-box ensures padding does not increase element width.
-   - Using a soft grey background (#f4f6f9) makes the white notepad container stand out.
-   -------------------------------------------------------------------------- */
+/* 1. Global Reset */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Includes padding within element width */
 }
 
+/* 2. Body: Centering the notepad on screen */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f4f6f9; /* Soft, neutral light-grey page background */
-  color: #2c3e50;            /* Dark slate colour for clear text readability */
-  line-height: 1.6;
-  padding: 40px 20px;        /* Spacing around the entire page */
-  display: flex;             /* Flexbox used to center the container on screen */
-  justify-content: center;   /* Horizontally centers child items */
-  align-items: flex-start;   /* Aligns the container towards top */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f4f6f9; /* Soft grey page background */
+  color: #2c3e50;            /* Slate text colour */
+  padding: 40px 15px;
+  display: flex;             /* Flexbox to center the card horizontally */
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
 }
 
-/* --------------------------------------------------------------------------
-   2. MAIN NOTEPAD CONTAINER
-   - Mimics a physical desktop planner card or clean study notebook.
-   - Uses border-radius for smooth corners and a soft shadow for depth.
-   -------------------------------------------------------------------------- */
+/* 3. Main Notepad Container */
 .notepad-container {
-  background-color: #ffffff; /* Crisp white surface */
+  background-color: #ffffff; /* White card surface */
   width: 100%;
-  max-width: 720px;          /* Maximum readable width for a student dashboard */
-  border-radius: 12px;       /* Rounds the 4 outer corners */
-  border: 1px solid #e2e8f0; /* Subtle light border outlining the notepad */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); /* Soft elevation shadow */
-  overflow: hidden;          /* Prevents child elements from bleeding past corners */
+  max-width: 680px;          /* Maximum width like a physical notebook */
+  border-radius: 12px;       /* Rounded corners */
+  border: 1px solid #e2e8f0; /* Soft light grey outline */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); /* Gentle drop shadow */
+  overflow: hidden;
 }
 
-/* --------------------------------------------------------------------------
-   3. APP HEADER
-   - Clean title bar with subject and college badge.
-   -------------------------------------------------------------------------- */
+/* 4. App Header */
 .app-header {
-  padding: 28px 32px 20px 32px;
-  border-bottom: 2px solid #edf2f7; /* Line separating header from content */
+  padding: 24px 28px 18px;
+  border-bottom: 2px solid #edf2f7;
   background-color: #fafbfc;
 }
 
 .header-top {
   display: flex;
-  justify-content: space-between; /* Pushes the title to left and badge to right */
-  align-items: center;            /* Aligns items vertically in the center */
-  margin-bottom: 6px;
+  justify-content: space-between; /* Title on left, badge on right */
+  align-items: center;
+  margin-bottom: 4px;
 }
 
 .app-title {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   color: #1a202c;
-  letter-spacing: -0.5px;
 }
 
 .badge-student {
   font-size: 11px;
   font-weight: 700;
-  text-transform: uppercase;
-  background-color: #ebf4ff; /* Light blue background */
-  color: #2b6cb0;            /* Dark blue text */
-  padding: 4px 10px;         /* Inner space inside the badge */
-  border-radius: 20px;       /* Pill shape */
+  background-color: #ebf4ff;
+  color: #2b6cb0;
+  padding: 4px 10px;
+  border-radius: 20px;
   border: 1px solid #bee3f8;
 }
 
 .app-subtitle {
-  font-size: 14px;
-  color: #718096; /* Muted grey description */
+  font-size: 13px;
+  color: #718096;
 }
 
-/* --------------------------------------------------------------------------
-   4. APP CONTENT WRAPPER
-   -------------------------------------------------------------------------- */
+/* 5. Content Wrapper */
 .app-content {
-  padding: 28px 32px;
+  padding: 24px 28px;
 }
 
-/* --------------------------------------------------------------------------
-   5. SECTION 1: STUDY SESSION & TIMER CARD (STATIC UI)
-   - Visual card simulating a Pomodoro timer block for student focus sessions.
-   -------------------------------------------------------------------------- */
+/* 6. Section 1: Study Timer Card */
 .timer-section {
-  margin-bottom: 24px; /* Space below the timer before the task input */
+  margin-bottom: 22px;
 }
 
 .timer-card {
   background-color: #f7fafc;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
-  padding: 20px;
+  padding: 18px;
   display: flex;
   flex-direction: column; /* Stacks timer elements vertically */
-  align-items: center;    /* Centers items horizontally */
+  align-items: center;
   text-align: center;
-}
-
-.timer-info {
-  margin-bottom: 12px;
 }
 
 .timer-label {
   display: block;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.8px;
   color: #a0aec0;
-  text-transform: uppercase;
-  margin-bottom: 2px;
+  letter-spacing: 0.8px;
 }
 
 .timer-subject {
@@ -131,35 +106,31 @@ body {
 .timer-display {
   display: flex;
   align-items: baseline;
-  gap: 8px; /* Gap between time digits and the pomodoro tag */
-  margin-bottom: 16px;
+  gap: 8px;
+  margin: 10px 0 14px;
 }
 
 .time-digits {
-  font-size: 44px;
+  font-size: 42px;
   font-weight: 800;
-  color: #2b6cb0; /* College study blue */
-  letter-spacing: 1px;
+  color: #2b6cb0; /* Study blue */
 }
 
 .timer-tag {
-  font-size: 12px;
+  font-size: 11px;
   background-color: #e2e8f0;
   color: #4a5568;
   padding: 2px 8px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
 }
 
 .timer-controls {
   display: flex;
-  gap: 10px; /* Space between the three timer buttons */
+  gap: 8px; /* Space between buttons */
 }
 
-/* --------------------------------------------------------------------------
-   6. BUTTON STYLES
-   - Clean, standard flat buttons with hover states.
-   -------------------------------------------------------------------------- */
+/* 7. Button Styles */
 .btn {
   font-size: 13px;
   font-weight: 600;
@@ -167,14 +138,13 @@ body {
   border-radius: 6px;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .btn-primary {
   background-color: #3182ce;
   color: #ffffff;
 }
-
 .btn-primary:hover {
   background-color: #2b6cb0;
 }
@@ -184,7 +154,6 @@ body {
   color: #4a5568;
   border-color: #cbd5e0;
 }
-
 .btn-secondary:hover {
   background-color: #e2e8f0;
 }
@@ -194,54 +163,45 @@ body {
   color: #718096;
   border-color: #e2e8f0;
 }
-
 .btn-outline:hover {
   background-color: #f7fafc;
   color: #4a5568;
 }
 
-/* --------------------------------------------------------------------------
-   7. SECTION 2: ADD TASK FORM
-   - Flexbox makes input expand to take remaining width, button sits on right.
-   -------------------------------------------------------------------------- */
+/* 8. Add Task Form */
 .add-task-section {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .task-form {
   display: flex;
-  gap: 10px; /* 10px space between text field and add button */
+  gap: 10px;
 }
 
 .task-input {
-  flex: 1; /* Automatically takes all available horizontal space */
+  flex: 1; /* Automatically stretches to fill available horizontal space */
   padding: 10px 14px;
   font-size: 14px;
   border: 1px solid #cbd5e0;
   border-radius: 6px;
   outline: none;
-  color: #2d3748;
 }
-
 .task-input:focus {
-  border-color: #3182ce; /* Highlight border blue when clicked */
+  border-color: #3182ce;
   box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
 }
 
 .add-btn {
-  white-space: nowrap; /* Keeps the "+ Add Task" text on one line */
-  padding: 10px 18px;
+  white-space: nowrap;
 }
 
-/* --------------------------------------------------------------------------
-   8. SECTION 3: TASK FILTERS & COUNTER
-   -------------------------------------------------------------------------- */
+/* 9. Filter Tabs */
 .task-filter-section {
   display: flex;
-  justify-content: space-between; /* Tabs on left, counter text on right */
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #edf2f7;
 }
 
@@ -260,79 +220,70 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
-
 .filter-tab:hover {
-  color: #2d3748;
   background-color: #edf2f7;
+  color: #2d3748;
 }
-
 .filter-tab.active {
-  color: #3182ce;
   background-color: #ebf8ff;
+  color: #3182ce;
 }
 
 .filter-counter {
   font-size: 12px;
   color: #718096;
-  font-weight: 500;
 }
 
-/* --------------------------------------------------------------------------
-   9. SECTION 4: TASK LIST (`<ul>` and `<li>`)
-   - Flexbox aligns the checkbox, text label, badges, and delete button neatly.
-   -------------------------------------------------------------------------- */
+/* 10. Task List Items */
 .task-list {
-  list-style: none; /* Removes default browser bullet points */
+  list-style: none; /* Removes default browser bullets */
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Clean gap between each task row */
-  margin-bottom: 24px;
+  gap: 8px;
+  margin-bottom: 22px;
 }
 
 .task-item {
   display: flex;
-  justify-content: space-between; /* Task title on left, badges on right */
+  justify-content: space-between; /* Title on left, tags and delete on right */
   align-items: center;
-  padding: 12px 14px;
+  padding: 11px 14px;
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .task-item:hover {
   border-color: #cbd5e0;
-  background-color: #fcfdfd;
 }
 
 .task-left {
   display: flex;
   align-items: center;
-  gap: 12px; /* Space between checkbox and text title */
+  gap: 12px;
   flex: 1;
 }
 
 .task-checkbox {
   width: 16px;
   height: 16px;
-  accent-color: #3182ce; /* Sets browser checkbox check colour */
+  accent-color: #3182ce;
   cursor: pointer;
 }
 
 .task-title {
   font-size: 14px;
   color: #2d3748;
-  font-weight: 500;
-  cursor: pointer;
 }
 
 .task-right {
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between tags and delete icon */
+  gap: 8px;
 }
 
-/* Task Badges / Tags */
+/* Subject & Priority Badges */
 .tag {
   font-size: 11px;
   font-weight: 600;
@@ -340,47 +291,14 @@ body {
   border-radius: 4px;
 }
 
-.tag-sl {
-  background-color: #e9d8fd;
-  color: #6b46c1; /* Purple for Scripting Languages Lab */
-}
-
-.tag-cse {
-  background-color: #feebc8;
-  color: #c05621; /* Orange for CSE subjects */
-}
-
-.tag-viva {
-  background-color: #fed7d7;
-  color: #9b2c2c; /* Red for Viva prep */
-}
-
-.tag-doc {
-  background-color: #e2e8f0;
-  color: #4a5568; /* Slate grey for documentation */
-}
-
-.tag-ppt {
-  background-color: #feefc3;
-  color: #b7791f; /* Gold/yellow for Presentation */
-}
-
-.tag-priority-high {
-  background-color: #fff5f5;
-  color: #e53e3e;
-  border: 1px solid #feb2b2;
-}
-
-.tag-priority-med {
-  background-color: #fffaf0;
-  color: #dd6b20;
-  border: 1px solid #fbd38d;
-}
-
-.tag-done {
-  background-color: #c6f6d5;
-  color: #22543d;
-}
+.tag-sl { background-color: #e9d8fd; color: #6b46c1; }
+.tag-cse { background-color: #feebc8; color: #c05621; }
+.tag-viva { background-color: #fed7d7; color: #9b2c2c; }
+.tag-doc { background-color: #e2e8f0; color: #4a5568; }
+.tag-ppt { background-color: #feefc3; color: #b7791f; }
+.tag-priority-high { background-color: #fff5f5; color: #e53e3e; border: 1px solid #feb2b2; }
+.tag-priority-med { background-color: #fffaf0; color: #dd6b20; border: 1px solid #fbd38d; }
+.tag-done { background-color: #c6f6d5; color: #22543d; }
 
 .delete-btn {
   background: none;
@@ -391,30 +309,26 @@ body {
   padding: 0 4px;
   line-height: 1;
 }
-
 .delete-btn:hover {
-  color: #e53e3e; /* Turns red on hover */
+  color: #e53e3e;
 }
 
-/* Completed Task State Styling */
+/* Completed Strikethrough State */
 .task-completed {
   background-color: #f7fafc;
   opacity: 0.75;
 }
-
 .task-completed .task-title {
-  text-decoration: line-through; /* Strikethrough style for finished tasks */
+  text-decoration: line-through;
   color: #a0aec0;
 }
 
-/* --------------------------------------------------------------------------
-   10. SECTION 5: DAILY PROGRESS BAR
-   -------------------------------------------------------------------------- */
+/* 11. Daily Progress Bar */
 .progress-section {
   background-color: #f7fafc;
   border: 1px solid #edf2f7;
   border-radius: 8px;
-  padding: 16px;
+  padding: 14px 16px;
 }
 
 .progress-labels {
@@ -439,17 +353,15 @@ body {
 }
 
 .progress-bar-fill {
-  width: 40%; /* 2 completed out of 5 total tasks = 40% */
   height: 100%;
   background-color: #3182ce;
   border-radius: 4px;
+  transition: width 0.3s ease; /* Smooth bar animation when task is checked */
 }
 
-/* --------------------------------------------------------------------------
-   11. APP FOOTER
-   -------------------------------------------------------------------------- */
+/* 12. Footer */
 .app-footer {
-  padding: 16px 32px;
+  padding: 14px 28px;
   background-color: #fafbfc;
   border-top: 1px solid #edf2f7;
   text-align: center;
@@ -463,39 +375,21 @@ body {
   margin-top: 2px;
 }
 
-/* --------------------------------------------------------------------------
-   12. RESPONSIVENESS (MOBILE FRIENDLY)
-   - Stacks task items neatly when viewed on smaller phone screens.
-   -------------------------------------------------------------------------- */
+/* 13. Responsive Mobile Media Query */
 @media (max-width: 600px) {
   body {
-    padding: 16px 10px;
+    padding: 15px 10px;
   }
-
-  .app-header,
-  .app-content,
-  .app-footer {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
   .task-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
-
   .task-right {
     width: 100%;
     justify-content: flex-end;
   }
-
   .task-form {
     flex-direction: column;
-  }
-
-  .timer-controls {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }

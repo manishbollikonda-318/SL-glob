@@ -8,10 +8,10 @@
 </head>
 <body>
 
-  <!-- Main Container: Centered on the page like a physical study notepad -->
+  <!-- Main Notepad Card Container -->
   <div class="notepad-container">
 
-    <!-- Header Section: App title and brief student description -->
+    <!-- Header -->
     <header class="app-header">
       <div class="header-top">
         <h1 class="app-title">FocusFlow</h1>
@@ -22,7 +22,7 @@
 
     <main class="app-content">
 
-      <!-- Section 1: Study Session & Focus Timer (Static UI) -->
+      <!-- 1. Study Session Timer (100% Functional) -->
       <section class="timer-section">
         <div class="timer-card">
           <div class="timer-info">
@@ -30,62 +30,63 @@
             <span class="timer-subject">Subject: Scripting Languages Lab (Experiment 4)</span>
           </div>
           <div class="timer-display">
-            <span class="time-digits">25:00</span>
+            <span class="time-digits" id="timerDisplay">25:00</span>
             <span class="timer-tag">Pomodoro</span>
           </div>
           <div class="timer-controls">
-            <button class="btn btn-primary">Start Session</button>
-            <button class="btn btn-secondary">Pause</button>
-            <button class="btn btn-outline">Reset</button>
+            <button class="btn btn-primary" id="startBtn">Start Session</button>
+            <button class="btn btn-secondary" id="pauseBtn">Pause</button>
+            <button class="btn btn-outline" id="resetBtn">Reset</button>
           </div>
         </div>
       </section>
 
-      <!-- Section 2: Quick Add Task Input -->
+      <!-- 2. Add New Task Input -->
       <section class="add-task-section">
-        <form class="task-form" onsubmit="return false;">
+        <form class="task-form" id="taskForm">
           <input 
             type="text" 
+            id="taskInput" 
             class="task-input" 
             placeholder="Add a new assignment, lab record, or study task..."
-            aria-label="New Task Input"
+            required
           >
           <button type="submit" class="btn btn-primary add-btn">+ Add Task</button>
         </form>
       </section>
 
-      <!-- Section 3: Task Filters and Summary Bar -->
+      <!-- 3. Filter Tabs & Remaining Count -->
       <section class="task-filter-section">
         <div class="filter-group">
-          <button class="filter-tab active">All (5)</button>
-          <button class="filter-tab">Pending (3)</button>
-          <button class="filter-tab">Completed (2)</button>
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="pending">Pending</button>
+          <button class="filter-tab" data-filter="completed">Completed</button>
         </div>
-        <span class="filter-counter">3 tasks remaining today</span>
+        <span class="filter-counter" id="taskCounter">3 tasks remaining today</span>
       </section>
 
-      <!-- Section 4: Daily Tasks List -->
+      <!-- 4. Dynamic Tasks List -->
       <section class="task-list-section">
-        <ul class="task-list">
+        <ul class="task-list" id="taskList">
 
-          <!-- Task Item 1: Pending -->
+          <!-- Task 1 (Pending) -->
           <li class="task-item">
             <div class="task-left">
-              <input type="checkbox" id="task1" class="task-checkbox">
-              <label for="task1" class="task-title">Complete Scripting Languages Lab Micro Project</label>
+              <input type="checkbox" class="task-checkbox">
+              <span class="task-title">Complete Scripting Languages Lab Micro Project</span>
             </div>
             <div class="task-right">
               <span class="tag tag-sl">SL Lab</span>
-              <span class="tag tag-priority-high">High Priority</span>
+              <span class="tag tag-priority-high">High</span>
               <button class="delete-btn" title="Delete task">&times;</button>
             </div>
           </li>
 
-          <!-- Task Item 2: Pending -->
+          <!-- Task 2 (Pending) -->
           <li class="task-item">
             <div class="task-left">
-              <input type="checkbox" id="task2" class="task-checkbox">
-              <label for="task2" class="task-title">Practice HTML5 Semantic Elements &amp; CSS Flexbox</label>
+              <input type="checkbox" class="task-checkbox">
+              <span class="task-title">Practice HTML5 Semantic Elements &amp; CSS Flexbox</span>
             </div>
             <div class="task-right">
               <span class="tag tag-cse">Web Tech</span>
@@ -94,24 +95,24 @@
             </div>
           </li>
 
-          <!-- Task Item 3: Pending -->
+          <!-- Task 3 (Pending) -->
           <li class="task-item">
             <div class="task-left">
-              <input type="checkbox" id="task3" class="task-checkbox">
-              <label for="task3" class="task-title">Prepare Viva Questions on CSS Box Model &amp; Positioning</label>
+              <input type="checkbox" class="task-checkbox">
+              <span class="task-title">Prepare Viva Questions on CSS Box Model &amp; Flexbox</span>
             </div>
             <div class="task-right">
               <span class="tag tag-viva">Viva Prep</span>
-              <span class="tag tag-priority-high">High Priority</span>
+              <span class="tag tag-priority-high">High</span>
               <button class="delete-btn" title="Delete task">&times;</button>
             </div>
           </li>
 
-          <!-- Task Item 4: Completed -->
+          <!-- Task 4 (Completed) -->
           <li class="task-item task-completed">
             <div class="task-left">
-              <input type="checkbox" id="task4" class="task-checkbox" checked>
-              <label for="task4" class="task-title">Format Spiral-Bind Documentation (Sections 1 to 14)</label>
+              <input type="checkbox" class="task-checkbox" checked>
+              <span class="task-title">Format Spiral-Bind Documentation (Sections 1 to 14)</span>
             </div>
             <div class="task-right">
               <span class="tag tag-doc">Documentation</span>
@@ -120,11 +121,11 @@
             </div>
           </li>
 
-          <!-- Task Item 5: Completed -->
+          <!-- Task 5 (Completed) -->
           <li class="task-item task-completed">
             <div class="task-left">
-              <input type="checkbox" id="task5" class="task-checkbox" checked>
-              <label for="task5" class="task-title">Draft 10-Slide PPT Presentation for Lab Review</label>
+              <input type="checkbox" class="task-checkbox" checked>
+              <span class="task-title">Draft 10-Slide PPT Presentation for Lab Review</span>
             </div>
             <div class="task-right">
               <span class="tag tag-ppt">Presentation</span>
@@ -136,20 +137,20 @@
         </ul>
       </section>
 
-      <!-- Section 5: Daily Study Progress Summary -->
+      <!-- 5. Daily Study Completion Progress -->
       <section class="progress-section">
         <div class="progress-labels">
           <span>Overall Daily Completion</span>
-          <span class="progress-percent">40%</span>
+          <span class="progress-percent" id="progressPercent">40%</span>
         </div>
         <div class="progress-bar-container">
-          <div class="progress-bar-fill"></div>
+          <div class="progress-bar-fill" id="progressBarFill" style="width: 40%;"></div>
         </div>
       </section>
 
     </main>
 
-    <!-- Footer: Lab Identification -->
+    <!-- Footer -->
     <footer class="app-footer">
       <p>FocusFlow &bull; Scripting Languages Lab Micro Project</p>
       <p class="college-tag">Gokaraju Rangaraju Institute of Engineering and Technology (GRIET)</p>
@@ -157,5 +158,7 @@
 
   </div>
 
+  <!-- Short and easy-to-explain JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
