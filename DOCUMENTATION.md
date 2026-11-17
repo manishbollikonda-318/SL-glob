@@ -83,8 +83,10 @@ FocusFlow includes the following 100% functional and visual features:
 1. **Notepad-Style Card Layout:**
    - A clean, centered white card (`max-width: 680px`) with subtle borders and soft shadows on a gentle grey background (`#f4f6f9`), creating a comfortable, paper-like study notepad feel.
 
-2. **Interactive Pomodoro Study Timer:**
-   - A fully functional 25-minute study timer with *Start Session*, *Pause*, and *Reset* controls powered by JavaScript's `setInterval()`. It formats minutes and seconds cleanly (`MM:SS`) and alerts the user upon session completion.
+2. **Customizable & Flexible Study Session Timer:**
+   - Allows students to adjust the timer freely and study for as much time as they need (from short 15-minute quick reviews to 90+ minute deep study blocks).
+   - Features quick-pick duration presets (**15m**, **25m**, **45m**, **60m**, **90m**), stepper buttons (**-5m** and **+5m**), and a direct numeric input field where any custom number of minutes can be typed.
+   - Fully functional *Start Session*, *Pause*, and *Reset* controls powered by JavaScript's `setInterval()`. Formats minutes and seconds cleanly (`MM:SS`) and alerts the user upon completion.
 
 3. **Dynamic Task Addition:**
    - Typing into the task input box and clicking `+ Add Task` (or pressing Enter) dynamically creates and appends a new task item (`<li>`) to the document without refreshing the page (`e.preventDefault()`).
@@ -128,18 +130,23 @@ FocusFlow includes the following 100% functional and visual features:
 
 ## 6. ALGORITHM
 
-### 6.1 Timer Execution Algorithm
-1. Initialize `timeLeft = 1500` (25 minutes $\times$ 60 seconds) and `timerId = null`.
-2. When the user clicks **Start Session**:
+### 6.1 Timer Execution & Custom Duration Algorithm
+1. Initialize `totalMinutes = 25`, `timeLeft = totalMinutes * 60` (1500 seconds), and `timerId = null`.
+2. Duration Adjustment (`setDuration(mins)`):
+   - When the user selects a preset (15m, 25m, 45m, 60m, 90m), clicks `+5m`/`-5m`, or types a custom number into the numeric input, invoke `setDuration(mins)`.
+   - Update `totalMinutes = mins` (bounded between 1 and 300 minutes).
+   - Clear any running interval via `clearInterval(timerId)` and reset `timeLeft = totalMinutes * 60`.
+   - Update the display text to the newly selected minutes (`MM:00`).
+3. When the user clicks **Start Session**:
    - Check if `timerId` is already active; if not, call `setInterval()` every $1000\text{ ms}$.
    - On each tick, decrement `timeLeft` by $1$ and compute:
      $$\text{minutes} = \lfloor \text{timeLeft} / 60 \rfloor, \quad \text{seconds} = \text{timeLeft} \pmod{60}$$
    - Format with `.padStart(2, '0')` and update `timerDisplay.textContent`.
-   - If `timeLeft === 0`, clear the interval and notify the student with an alert.
-3. When the user clicks **Pause**:
+   - If `timeLeft === 0`, clear the interval and notify the student with a completion alert.
+4. When the user clicks **Pause**:
    - Call `clearInterval(timerId)` and set `timerId = null`.
-4. When the user clicks **Reset**:
-   - Stop the interval, set `timeLeft = 1500`, and reset the display to `25:00`.
+5. When the user clicks **Reset**:
+   - Stop the interval, set `timeLeft = totalMinutes * 60`, and reset the display to the chosen duration.
 
 ### 6.2 Task Addition & Progress Update Algorithm
 1. Intercept the task form submission via `e.preventDefault()`.

@@ -27,18 +27,19 @@
 ### SLIDE 2: Introduction to FocusFlow
 - **Slide Title:** Introduction to FocusFlow
 - **Bullet Points:**
-  - **What is FocusFlow?** A lightweight, interactive web application built to help college students track daily assignments and conduct focused 25-minute study sessions.
+  - **What is FocusFlow?** A lightweight, interactive web application built to help college students track daily assignments and conduct focused, customized study sessions.
   - **100% Functional Features:**
-    - Live countdown Pomodoro Study Timer (Start, Pause, Reset).
+    - Fully Adjustable Study Timer: Quick presets (15m, 25m, 45m, 60m, 90m), step buttons (-5m/+5m), and custom numeric inputs so students can study for as much time as they need.
+    - Live countdown with Start, Pause, and Reset controls.
     - Dynamic task addition via form input (without page refresh).
     - Interactive completion checkboxes with strikethrough styling.
     - Instant task deletion with automatic counter and progress updates.
     - Category filter tabs (*All*, *Pending*, *Completed*).
   - **Simplicity & Speed:** Zero third-party libraries, pure native code that runs instantly in any browser.
-- **Slide Layout & Visuals:** Screenshot of the FocusFlow interface centered with bullet points outlining the 5 functional components.
+- **Slide Layout & Visuals:** Screenshot of the FocusFlow interface centered with bullet points outlining the functional components.
 
 > **Speaker Notes (Viva Script):**
-> "FocusFlow solves the daily challenge of tracking multiple engineering assignments and lab records. Unlike static mockups, every feature in FocusFlow works: the timer ticks down, new tasks can be added, checkboxes strike through finished tasks, delete buttons remove items, and the progress bar calculates completion in real time."
+> "FocusFlow solves the daily challenge of tracking engineering assignments and maintaining productive study sessions. Instead of locking the student into a fixed 25-minute timer, FocusFlow allows students to customize their study duration freely—whether for a quick 15-minute revision or an extended 90-minute lab session—alongside an interactive task checklist."
 
 ---
 
@@ -140,16 +141,15 @@
 
 ### SLIDE 8: Key Code Snippets (Easy to Explain)
 - **Slide Title:** Key Code Snippets
-- **Snippet 1: Starting the Timer (`script.js`)**
+- **Snippet 1: Adjustable Duration Function (`script.js`)**
 ```javascript
-// Starts countdown every 1 second (1000ms)
-startBtn.addEventListener("click", () => {
-  if (timerId !== null) return;
-  timerId = setInterval(() => {
-    timeLeft--;
-    updateTimerDisplay();
-  }, 1000);
-});
+// Sets any study time from 1 to 300 minutes
+function setDuration(mins) {
+  totalMinutes = Math.max(1, parseInt(mins) || 25);
+  clearInterval(timerId); // Pause any running timer
+  timeLeft = totalMinutes * 60; // Convert to seconds
+  updateTimerDisplay(); // Display MM:SS
+}
 ```
 - **Snippet 2: Dynamic Progress Calculation (`script.js`)**
 ```javascript
@@ -164,7 +164,7 @@ function updateProgress() {
 - **Slide Layout & Visuals:** Two clean, syntax-highlighted code panels with annotations for viva explanation.
 
 > **Speaker Notes (Viva Script):**
-> "These two snippets demonstrate how simple the code is. Snippet 1 starts the timer using setInterval and decrements timeLeft every second. Snippet 2 counts total tasks and checked checkboxes, computes the percentage, and updates the progress bar width in two simple lines."
+> "These two snippets highlight our core logic. Snippet 1 shows how our timer is made fully adjustable: whenever the user clicks a preset or types a custom duration, setDuration converts the minutes into seconds, resets the display, and prepares the countdown. Snippet 2 calculates the completion percentage and updates the progress bar."
 
 ---
 

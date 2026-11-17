@@ -1,30 +1,78 @@
 /**
  * FocusFlow — Student Task Tracker Logic
  * Short, clean, and 100% functional JavaScript
- * Easy to explain in your SL Lab viva examination!
+ * Features an adjustable timer so students can study as long as they need!
  */
 
-// --- 1. POMODORO STUDY TIMER ---
-let timeLeft = 25 * 60; // 25 minutes converted into seconds (1500s)
-let timerId = null;     // Stores the setInterval reference
+// --- 1. CUSTOMIZABLE STUDY TIMER ---
+let totalMinutes = 25;            // Default duration in minutes
+let timeLeft = totalMinutes * 60; // Converted to seconds (1500s)
+let timerId = null;               // Stores the setInterval reference
 
 const timerDisplay = document.getElementById("timerDisplay");
+const customMinutes = document.getElementById("customMinutes");
+const decreaseTimeBtn = document.getElementById("decreaseTimeBtn");
+const increaseTimeBtn = document.getElementById("increaseTimeBtn");
+const presetPills = document.querySelectorAll(".preset-pill");
 const startBtn = document.getElementById("startBtn");
 const pauseBtn = document.getElementById("pauseBtn");
 const resetBtn = document.getElementById("resetBtn");
 
-// Function to format seconds into MM:SS format
+// Helper function to format seconds into MM:SS format
 function updateTimerDisplay() {
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
-  // padStart ensures single digits look like "05" instead of "5"
+  // padStart ensures numbers look like "05:00" instead of "5:0"
   timerDisplay.textContent = 
     String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
 }
 
+// Function to set any duration (from 1 minute to 300 minutes / 5 hours)
+function setDuration(mins) {
+  mins = parseInt(mins) || 25;
+  if (mins < 1) mins = 1;
+  if (mins > 300) mins = 300;
+
+  totalMinutes = mins;
+  customMinutes.value = mins;
+
+  // Stop running timer and reset to the new duration
+  clearInterval(timerId);
+  timerId = null;
+  timeLeft = totalMinutes * 60;
+  updateTimerDisplay();
+
+  // Highlight the matching preset button if one matches
+  presetPills.forEach((pill) => {
+    pill.classList.toggle("active", parseInt(pill.dataset.mins) === mins);
+  });
+}
+
+// -5 minutes step button
+decreaseTimeBtn.addEventListener("click", () => {
+  setDuration(totalMinutes - 5);
+});
+
+// +5 minutes step button
+increaseTimeBtn.addEventListener("click", () => {
+  setDuration(totalMinutes + 5);
+});
+
+// When user types any custom number directly into the input box
+customMinutes.addEventListener("change", (e) => {
+  setDuration(e.target.value);
+});
+
+// Quick preset buttons (15m, 25m, 45m, 60m, 90m)
+presetPills.forEach((pill) => {
+  pill.addEventListener("click", () => {
+    setDuration(pill.dataset.mins);
+  });
+});
+
 // Start button: Runs the countdown once every second (1000ms)
 startBtn.addEventListener("click", () => {
-  if (timerId !== null) return; // Prevent multiple timers from running together
+  if (timerId !== null) return; // Prevent multiple timers running at once
   timerId = setInterval(() => {
     if (timeLeft > 0) {
       timeLeft--;
@@ -32,7 +80,7 @@ startBtn.addEventListener("click", () => {
     } else {
       clearInterval(timerId);
       timerId = null;
-      alert("Great job! Your 25-minute study session is complete!");
+      alert(`Great job! Your ${totalMinutes}-minute study session is complete!`);
     }
   }, 1000);
 });
@@ -43,11 +91,11 @@ pauseBtn.addEventListener("click", () => {
   timerId = null;
 });
 
-// Reset button: Resets the timer back to 25:00
+// Reset button: Resets the timer back to the selected minutes
 resetBtn.addEventListener("click", () => {
   clearInterval(timerId);
   timerId = null;
-  timeLeft = 25 * 60;
+  timeLeft = totalMinutes * 60;
   updateTimerDisplay();
 });
 
@@ -82,7 +130,7 @@ const taskForm = document.getElementById("taskForm");
 const taskInput = document.getElementById("taskInput");
 
 taskForm.addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevents the browser from refreshing the page on submit
+  e.preventDefault(); // Prevents browser from refreshing the page
   const taskText = taskInput.value.trim();
   if (taskText === "") return;
 

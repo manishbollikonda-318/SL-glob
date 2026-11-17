@@ -107,7 +107,7 @@ body {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  margin: 10px 0 14px;
+  margin: 8px 0 12px;
 }
 
 .time-digits {
@@ -123,6 +123,107 @@ body {
   padding: 2px 8px;
   border-radius: 4px;
   font-weight: 600;
+}
+
+/* Time Duration Adjuster (Set as much study time as needed) */
+.time-adjuster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.adjuster-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.adjuster-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adjust-step-btn {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e0;
+  color: #4a5568;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.adjust-step-btn:hover {
+  background-color: #edf2f7;
+  color: #2b6cb0;
+  border-color: #a0aec0;
+}
+
+.custom-time-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e0;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.custom-time-input {
+  width: 52px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2b6cb0;
+  text-align: center;
+  font-family: inherit;
+}
+
+.time-unit {
+  font-size: 11px;
+  font-weight: 600;
+  color: #718096;
+}
+
+/* Quick Duration Presets */
+.preset-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.preset-pill {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #718096;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.preset-pill:hover {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.preset-pill.active {
+  background-color: #ebf8ff;
+  color: #3182ce;
+  border-color: #bee3f8;
+  font-weight: 700;
 }
 
 .timer-controls {
