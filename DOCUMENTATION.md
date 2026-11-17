@@ -1,5 +1,5 @@
 # GOKARAJU RANGARAJU INSTITUTE OF ENGINEERING AND TECHNOLOGY
-### (Autonomous Institution Affiliated to JNTUH, Approved by AICTE, Accredited by NAAC with 'A++' Grade)
+### (Autonomous Institution Affiliated to JNTUH, Hyderabad)
 **Department of Computer Science and Engineering / Information Technology**  
 **Academic Year: 2025 – 2026**
 
@@ -7,11 +7,11 @@
 
 # A MICRO-PROJECT REPORT
 ### ON
-# **NEXUS: CINEMATIC AI AGENT DASHBOARD**
+# **FOCUSFLOW: A MINIMALIST STUDENT TASK TRACKER UI**
 
-**Course Title:** Scripting Languages Laboratory (SL LAB)  
+**Course Name:** Scripting Languages Laboratory (SL LAB)  
 **Course Code:** SL Lab GLOB  
-**Semester / Year:** B.Tech — III Year / II Semester  
+**Class / Year:** B.Tech — III Year / II Semester  
 
 ---
 
@@ -19,403 +19,360 @@
 
 | S.No. | Section Title | Page No. |
 | :---: | :--- | :---: |
-| **1** | Title Page & Project Identification | 1 |
-| **2** | Abstract | 2 |
-| **3** | Introduction | 3 |
-| **4** | Outlining the Problem | 4 |
-| **5** | Key Features | 5 |
-| **6** | Hardware and Software Requirements | 6 |
-| **7** | Algorithm & Execution Logic | 7 |
-| **8** | Flowchart (DOM Tree & Event Traversal) | 9 |
-| **9** | Source Code Reference & Architecture | 11 |
-| **10**| Output & Visual Verification Specifications | 13 |
-| **11**| In-Depth Technical Explanation (CSS & Layout Mechanics) | 15 |
-| **12**| Future Enhancements | 18 |
-| **13**| Project Success Summary | 19 |
-| **14**| Conclusion | 20 |
-| **15**| References & Citations | 21 |
+| **1** | Abstract | 1 |
+| **2** | Introduction | 2 |
+| **3** | Outlining the Problem | 3 |
+| **4** | Key Features | 4 |
+| **5** | Hardware and Software Requirements | 5 |
+| **6** | Algorithm | 6 |
+| **7** | Flowchart | 7 |
+| **8** | Source Code | 8 |
+| **9** | Output | 10 |
+| **10**| Explanation | 11 |
+| **11**| Future Enhancement | 13 |
+| **12**| Project Success Summary | 14 |
+| **13**| Conclusion | 15 |
+| **14**| References | 16 |
 
 ---
 
-## 1. TITLE PAGE & PROJECT IDENTIFICATION
+## 1. ABSTRACT
 
-- **Project Title:** Nexus: Cinematic AI Agent Dashboard
-- **Subject / Laboratory:** Scripting Languages Laboratory (SL LAB GLOB)
-- **Institution:** Gokaraju Rangaraju Institute of Engineering and Technology (GRIET), Bachupally, Hyderabad, Telangana – 500090
-- **Department:** Department of Computer Science and Engineering / Information Technology
-- **Technology Stack:** HTML5 Semantic Markup, CSS3 (CSS Grid, Flexbox, Custom Properties, Glassmorphism, GPU-Accelerated Keyframes), Vanilla JavaScript (ECMAScript 2023)
-- **Target Audience:** Engineering Lab Evaluators, Frontend Architects, Systems Telemetry Engineers
+In an academic environment, students balance multiple engineering subjects, lab records, assignments, and exam preparation daily. Maintaining focus and keeping track of pending deadlines often becomes overwhelming without a structured workflow. 
 
----
+The objective of this micro-project, titled **"FocusFlow: A Minimalist Student Task Tracker UI"**, is to design and develop a clean, responsive, and student-friendly task management interface using core front-end scripting technologies: **HTML5** and **CSS3**. 
 
-## 2. ABSTRACT
+Unlike heavy modern commercial applications that distract users with excessive animations or complex menus, FocusFlow adopts a clean, physical notepad aesthetic. It incorporates a static Pomodoro study session timer, an assignment input field, filter tabs, a structured daily checklist with priority badges, and a visual completion progress bar. 
 
-Modern distributed computational paradigms—specifically autonomous multi-agent Artificial Intelligence clusters, large language model (LLM) orchestration swarms, and high-performance computing (HPC) nodes—generate continuous, high-dimensional telemetry streams. Traditional user interfaces developed for administrative monitoring frequently succumb to information saturation, poor spatial organization, jarring layout shifts, and visual monotony. 
-
-This micro-project, entitled **"Nexus: Cinematic AI Agent Dashboard"**, is engineered to demonstrate the zenith of modern declarative web styling without reliance on bloated third-party component frameworks or heavy runtime abstractions. Formulated within the scope of the Scripting Languages Laboratory (SL Lab GLOB) at GRIET, Nexus implements an interactive, ultra-responsive, dark-mode command center. 
-
-By leveraging **CSS Grid** for two-dimensional viewport macro-architecture, **CSS Flexible Box (Flexbox)** for localized one-dimensional component alignment, **CSS Custom Properties (Variables)** for hierarchical design tokenization, and **Backdrop Filter Glassmorphism** layered over hardware-accelerated **`@keyframes` animations**, the application renders real-time agent statuses, neural inference spectrum bar charts, GPU VRAM radial meters, dynamic audio-frequency spectrum visualizations, and an interactive simulated terminal. 
-
-The implementation achieves 60 frames per second (FPS) rendering efficiency while upholding strict accessibility, modular design principles, and zero-latency user interactivity.
+Built exclusively with semantic HTML tags and standard CSS Flexbox, this project demonstrates how clean code and simple CSS properties can produce an accessible, responsive study dashboard without any complex external dependencies.
 
 ---
 
-## 3. INTRODUCTION
+## 2. INTRODUCTION
 
-The rapid evolution of web standards has positioned the modern web browser as a ubiquitous, platform-independent operating runtime. In enterprise environments, administrative dashboards and mission control panels serve as the cognitive bridge between human operators and distributed autonomous software agents. Scripting languages—predominantly HTML5 for structural ontology, CSS3 for spatial and visual composition, and JavaScript for asynchronous event dispatch—form the tri-pillar foundation of frontend engineering.
+The World Wide Web is fundamentally built on two core declarative languages: **HyperText Markup Language (HTML)** for organizing document structure and **Cascading Style Sheets (CSS)** for visual presentation. In the **Scripting Languages Laboratory (SL LAB)** curriculum at GRIET, mastering these fundamental building blocks is crucial before advancing to dynamic client-side and server-side scripting.
 
-The **Nexus** project was conceived to synthesize these fundamental technologies into a production-grade, cinematic user interface. In stark contrast to utility-first styling frameworks that obscure raw browser mechanics, this project relies directly on standard W3C-compliant CSS3 specifications. 
+A task tracker is one of the most practical, universally understood web applications. It provides direct, real-world utility while testing a developer's understanding of:
+- Semantic document structure (`<header>`, `<main>`, `<section>`, `<ul>`, `<li>`, `<footer>`).
+- Form elements and accessibility (`<input>`, `<label>`, `<button>`).
+- The CSS Box Model (Margins, Borders, Padding, and Content Dimensions).
+- One-dimensional flexible layouts using CSS Flexbox (`display: flex`).
 
-The aesthetic philosophy draws inspiration from high-tech sci-fi command terminals and luxury enterprise SaaS interfaces:
-1. Deep obsidian and midnight slate canvas grounds the operator's focus.
-2. Frosted glass containers (`backdrop-filter`) provide visual stratification without enclosing data in opaque cages.
-3. High-contrast cybernetic neon accents (Cyber Cyan `#00f5d4`, Electric Violet `#8a2be2`, Aurora Emerald `#10b981`, and Solar Amber `#f59e0b`) establish unambiguous visual hierarchies and alert thresholds.
-4. Continuous micro-animations—such as pulsing beacons, orbital rings, and dynamic bar equalizers—reassure the operator of continuous background computational health.
-
----
-
-## 4. OUTLINING THE PROBLEM
-
-### 4.1 The Cognitive Overload in AI Monitoring
-In enterprise AI deployments, operators must simultaneously monitor disparate metrics: token generation rates, inter-node latency, Byzantine fault consensus, VRAM allocation across tensor pipelines, and active sub-agent thought processes (e.g., Aether, Chronos, Valkyrie). Conventional dashboards aggregate this information into dense, static tables or unstyled text dumps. This creates acute cognitive friction, leading to delayed anomaly detection and operational fatigue.
-
-### 4.2 The Pitfalls of Heavy Framework Overhead
-Modern web applications have developed an unhealthy reliance on multi-megabyte JavaScript libraries (e.g., massive charting packages, CSS-in-JS runtimes, and bulky UI component bundles) merely to render cards, charts, and modal dialogues. In mission-critical environments, such dependencies introduce:
-- Significant Initial Bundle Latency (Time to Interactive / First Contentful Paint penalties).
-- Memory leakage during prolonged dashboard uptime.
-- Fragile dependency supply chains.
-
-### 4.3 The Design Challenge
-The engineering challenge addressed by this micro-project is therefore twofold:
-1. **Spatial & Visual Hierarchy:** How to construct an information-dense, multi-widget interface that remains readable, visually engaging, and responsive across varying display form factors.
-2. **Pure Declarative Rendering:** How to achieve complex interactive data visualizations (such as radial capacity meters, sliding-window spectrum charts, and animated sound-wave frequency monitors) natively using CSS3 without depending on external charting libraries or heavy canvas runtimes.
+FocusFlow was designed to model a student's physical daily study planner. It brings together daily homework tracking and dedicated focus study sessions into a single, cohesive, distraction-free view.
 
 ---
 
-## 5. KEY FEATURES
+## 3. OUTLINING THE PROBLEM
 
-### 5.1 Advanced CSS Grid Macro-Architecture
-- Employs a robust `grid-template-columns: 2fr 1fr` multi-row architecture for the primary viewport widgets.
-- Automatically collapses into unified single-column layouts on viewports below `1200px` and `900px` using mobile-first and fluid media queries.
+### 3.1 The Daily Challenge of Student Task Management
+Engineering students at GRIET regularly manage concurrent deadlines across theoretical coursework, weekly laboratory assignments (such as Scripting Languages Lab, Operating Systems, DBMS), and project submissions. 
 
-### 5.2 Multi-Layered Frosted Glassmorphism
-- Surfaces utilize `background: rgba(16, 23, 41, 0.65)` coupled with `backdrop-filter: blur(18px)` and `-webkit-backdrop-filter: blur(18px)`.
-- Enclosed with sub-pixel borders (`border: 1px solid rgba(255, 255, 255, 0.08)`) and directional ambient drop-shadows (`box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45)`), preventing visual clipping while preserving depth.
+Common issues students face include:
+1. **Scattered Notes:** Tasks are frequently jotted down across rough notebooks, chat groups, or random sticky notes, leading to forgotten deadlines.
+2. **Loss of Focus:** Without dedicated time blocks, students often multitask inefficiently, leading to study fatigue.
+3. **Overcomplicated Task Apps:** Many commercial productivity tools are cluttered with excessive features, account logins, third-party trackers, and advertisements that distract from actual study.
 
-### 5.3 Pure CSS Real-Time Data Visualization
-- **Neural Load Bar Spectrum:** 12-hour sliding-window bar chart rendered via flex-column alignment. Bar heights are mapped dynamically using CSS custom properties (`--val`), featuring hover tooltips and glowing peak indicators.
-- **Radial Capacity Meters:** Built with dual SVG circular strokes where `stroke-dasharray` and `stroke-dashoffset` translate percentage values into hardware-rendered circular arcs.
-- **Audio-Frequency Spectrum Equalizer:** A 16-bar animated audio-visualizer simulating inter-node data resonance via staggered `@keyframes soundWave` animation delays.
-
-### 5.4 Cinematic Interactive Terminal (Neural Console)
-- Simulated real-time UNIX/Command-line streaming log interface with syntax-highlighted system prefixes (`SYS_INIT`, `AUTH_OK`, `VECTOR_SYNC`, `SWARM_CONSENSUS`).
-- Functional command interpreter supporting directives: `help`, `status`, `scan`, `purge`, `optimize`, `topology`, and `clear`.
-
-### 5.5 Swarm Orchestration Telemetry Cards
-- Dedicated cards for active AI autonomous agents (*Aether*, *Chronos*, *Valkyrie*, *Echo*) displaying active tasks, foundational model architectures, token processing velocity, and pulsing status beacons.
-
-### 5.6 Interactive Protocol Elevation Modal & Toasts
-- Glassmorphic modal dialogue for emergency system overrides equipped with customized radio selectors and live range sliders.
-- Asynchronous toast notification stack giving immediate feedback upon user interactions.
+### 3.2 The Need for a Simple, Clean Solution
+There is a clear need for a lightweight, accessible, and distraction-free task tracker that opens instantly in any standard browser. By building this interface with pure HTML5 and CSS3, we demonstrate that a high-utility, aesthetic user experience can be achieved through disciplined layout design and standard CSS styling.
 
 ---
 
-## 6. HARDWARE AND SOFTWARE REQUIREMENTS
+## 4. KEY FEATURES
 
-### 6.1 Hardware Requirements
-- **Processor:** Intel Core i3 / AMD Ryzen 3 (Quad-core, 2.0 GHz or higher). Recommended: Intel Core i5 / Apple Silicon M-Series.
-- **Memory (RAM):** Minimum 4 GB RAM (8 GB or higher recommended for concurrent browser devtools and DOM profiling).
-- **Storage:** 50 MB of available secondary storage for source files and documentation.
-- **Display Resolution:** Minimum $1366 \times 768$ pixels; optimal experience on $1920 \times 1080$ (Full HD) or higher (supports high-DPI Retina scaling).
-- **Peripherals:** Standard keyboard, multi-button mouse or trackpad.
+FocusFlow includes the following core functional and visual features:
 
-### 6.2 Software Requirements
-- **Operating System:** Platform-agnostic (Windows 10/11, macOS Sequoia/Sonoma, or Linux Ubuntu 22.04 LTS/Fedora).
-- **Development Environment / IDE:** Visual Studio Code (v1.85+), Antigravity IDE, Sublime Text 4, or JetBrains WebStorm.
-- **Recommended Extensions:** Live Server (v5.7+), HTML CSS Support, Prettier Code Formatter.
-- **Target Web Browsers:** 
-  - Google Chrome (v115+)
-  - Mozilla Firefox (v115+)
-  - Microsoft Edge (v115+)
-  - Apple Safari (v16.4+)
-- **Runtime Dependencies:** Completely standalone. Zero npm packages, zero external CDNs required for core execution (fonts gracefully fall back to system UI fonts).
+1. **Notepad-Style Card Layout:**
+   - A clean, centered white card (`max-width: 720px`) with subtle borders and gentle box shadows on a soft grey background (`#f4f6f9`), creating a comfortable, paper-like study notepad feel.
 
----
+2. **Static Pomodoro Study Timer Section:**
+   - A dedicated study block displaying the active subject name, a large 25:00 focus timer display, and three primary control buttons (*Start Session*, *Pause*, *Reset*).
 
-## 7. ALGORITHM & EXECUTION LOGIC
+3. **Task Input Form:**
+   - A full-width text input field paired with a clear "+ Add Task" button, allowing students to type new assignments and lab deadlines.
 
-### 7.1 Lifecycle Initialization Algorithm
-1. **Step 1: Document Fetch & Parse**
-   - The browser rendering engine initiates parsing of `index.html`.
-   - External font stylesheets (`Plus Jakarta Sans`, `JetBrains Mono`) and `styles.css` are discovered and fetched asynchronously.
-2. **Step 2: CSSOM (CSS Object Model) Construction**
-   - Design tokens defined within `:root` are evaluated and loaded into browser memory.
-   - Global reset rules (`*, *::before, *::after`) normalize box-sizing to `border-box`.
-   - Keyframe definitions (`orbFloat`, `pulseBeacon`, `soundWave`, `radarPing`) are registered with the GPU compositing engine.
-3. **Step 3: DOM Tree Synthesis**
-   - The document body is parsed into three primary layers:
-     - Ambient background glow layer (`.ambient-glow`).
-     - App container wrapper (`.app-container`).
-     - Overlay dialog and notification containers (`.modal-backdrop`, `.toast-container`).
-4. **Step 4: Layout & Composition**
-   - The `.app-container` is instantiated as a CSS Grid consisting of two primary tracks: `270px` (Sidebar) and `1fr` (Main Viewport).
-   - The `.main-widgets-grid` evaluates track sizing (`2fr 1fr`) and positions cards into their respective cell coordinates.
-   - Glassmorphic layers calculate backdrop blur buffers using GPU shader pipelines.
-5. **Step 5: Client-Side Script Binding (`script.js`)**
-   - The `DOMContentLoaded` event fires.
-   - System clock timer (`setInterval(updateClock, 1000)`) begins continuous UTC synchronization.
-   - Event listeners are attached to sidebar navigation toggles, timeframe filter pills, terminal execution buttons, modal triggers, and quick action cards.
-   - An ambient streaming telemetry generator starts periodic log injection.
+4. **Category Filter Tabs & Counter:**
+   - Filter buttons (*All*, *Pending*, *Completed*) alongside an active counter displaying remaining tasks for the day.
 
-### 7.2 Dynamic Bar Chart Re-Indexing Algorithm
-1. User clicks a timeframe pill (`1H`, `6H`, `12H`, `24H`).
-2. Script intercepts click event and clears `.active` class from peer elements.
-3. The selected timeframe key queries an internal numerical dictionary containing 12 normalized load percentages:
-   $$\text{Dataset}(T) = [d_0, d_1, d_2, \dots, d_{11}], \quad \text{where } d_i \in [0, 100]$$
-4. The script iterates over each column element `.chart-col`:
-   $$\text{col}_i.\text{style.setProperty}('--val', d_i + '\%')$$
-5. The CSS engine detects the custom property mutation and smoothly animates the bar height via:
-   $$\text{transition: height 0.8s cubic-bezier(0.16, 1, 0.3, 1)}$$
-6. Corresponding tooltip text nodes are updated with the newly calculated load values.
+5. **Structured Daily Checklist:**
+   - An unordered list (`<ul>`) where each task item (`<li>`) includes an interactive checkbox, subject tags (e.g., `SL Lab`, `Web Tech`, `Viva Prep`), priority chips (`High Priority`, `Medium`), and a delete action button.
+
+6. **Completed Task Distinction:**
+   - Finished tasks feature a light grey background and clean strikethrough text formatting to provide clear visual satisfaction of progress.
+
+7. **Daily Study Progress Bar:**
+   - A visual progress meter showing the percentage of completed tasks for the day (e.g., 40% completion).
+
+8. **Fully Responsive Design:**
+   - Uses CSS media queries to cleanly stack elements vertically on smaller mobile displays.
 
 ---
 
-## 8. FLOWCHART (DOM TREE & EVENT TRAVERSAL)
+## 5. HARDWARE AND SOFTWARE REQUIREMENTS
 
-### 8.1 Text-Based DOM Tree Structure
+### 5.1 Hardware Requirements
+- **System Architecture:** Standard Desktop PC or Laptop.
+- **Processor:** Intel Core i3 / AMD Ryzen 3 or equivalent.
+- **RAM:** Minimum 2 GB (4 GB recommended).
+- **Hard Disk Space:** Less than 10 MB required for project source files.
+- **Display Resolution:** $1366 \times 768$ pixels or higher.
+- **Input Devices:** Standard keyboard and mouse.
+
+### 5.2 Software Requirements
+- **Operating System:** Windows 10/11, macOS, or Linux (Ubuntu).
+- **Text Editor / IDE:** Visual Studio Code, Notepad++, or Antigravity IDE.
+- **Web Browser:** Any modern web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari).
+- **Execution Engine:** Native web browser engine (no compiler, Node.js, or external server required).
+
+---
+
+## 6. ALGORITHM
+
+The step-by-step logic of how the FocusFlow interface is structured, loaded, and styled by the browser is as follows:
+
+- **Step 1: Document Initialization**
+  - Define the `<!DOCTYPE html>` declaration and set the document language to English (`<html lang="en">`).
+  - Specify the `<meta charset="UTF-8">` character encoding and configure the viewport meta tag for mobile responsiveness.
+  - Link the external stylesheet (`styles.css`) in the `<head>` section.
+
+- **Step 2: Page Centering & Background Setup**
+  - In CSS, apply a global reset (`* { margin: 0; padding: 0; box-sizing: border-box; }`).
+  - Style the `<body>` element with `background-color: #f4f6f9` and apply `display: flex; justify-content: center;` to center the main container horizontally.
+
+- **Step 3: Notepad Container Construction**
+  - Create a `<div class="notepad-container">` with a `max-width: 720px`, white background (`#ffffff`), rounded corners (`border-radius: 12px`), and a subtle drop shadow (`box-shadow`).
+
+- **Step 4: Header & Meta Branding**
+  - Build `<header class="app-header">` containing the application title ("FocusFlow"), a student badge ("GRIET • SL LAB"), and a descriptive subtitle. Use Flexbox to position the title on the left and the badge on the right.
+
+- **Step 5: Study Timer UI Assembly**
+  - Inside a `<section class="timer-section">`, construct a centered card containing the session label, subject tag, time display (`25:00`), and control buttons.
+
+- **Step 6: Add Task Input Row**
+  - Implement a `<form class="task-form">` using `display: flex` with `gap: 10px`. Assign `flex: 1` to the text input so it automatically expands to fill the available row width next to the submit button.
+
+- **Step 7: Task Checklist Rendering**
+  - Use an unordered list (`<ul class="task-list">`) with `list-style: none`.
+  - For each task item (`<li class="task-item">`), use `display: flex; justify-content: space-between; align-items: center;` to align the checkbox and title on the left, and subject tags and delete button on the right.
+
+- **Step 8: Progress Bar & Footer Integration**
+  - Render a progress bar container with a styled inner fill div set to a percentage width (e.g., `width: 40%`).
+  - Add the footer with college and lab identification.
+
+- **Step 9: Responsive Viewport Adaptation**
+  - Add a `@media (max-width: 600px)` media query rule to shift flex directions from `row` to `column` on small mobile screens.
+
+---
+
+## 7. FLOWCHART
+
+### 7.1 Text-Based DOM Component Tree
 ```text
-[Document Root: <html>]
+[Document: index.html]
   │
-  ├── [<head>]
-  │     ├── <meta> (Viewport, Charset, Metadata)
-  │     ├── <title> "Nexus — Cinematic AI Agent Dashboard"
-  │     └── <link> (Fonts & styles.css)
+  ├── [<head>] (Meta tags, Title, styles.css link)
   │
-  └── [<body> (class="theme-dark")]
+  └── [<body>] (Centered via Flexbox, background: #f4f6f9)
         │
-        ├── [Ambient Glow Layer]
-        │     ├── div.ambient-glow.orb-1 (Cyan GPU Orb)
-        │     ├── div.ambient-glow.orb-2 (Violet GPU Orb)
-        │     └── div.ambient-glow.orb-3 (Blue GPU Orb)
-        │
-        ├── [div.app-container (CSS Grid Layout)]
-        │     │
-        │     ├── [<aside class="sidebar">]
-        │     │     ├── div.brand-section (Pulsing Core Nucleus & Orbital Ring)
-        │     │     ├── <nav class="nav-menu"> (Navigation Buttons & Live Pills)
-        │     │     └── div.sidebar-footer (Node Profile & Quorum Progress Bar)
-        │     │
-        │     └── [<main class="main-viewport">]
-        │           │
-        │           ├── [<header class="top-header">]
-        │           │     ├── div.header-left (Sidebar Toggle & Breadcrumbs)
-        │           │     ├── div.header-center (Cmd+K Global Search Input)
-        │           │     └── div.header-right (Live UTC Clock, Status Beacon, Override Btn)
-        │           │
-        │           └── [div.dashboard-scroll-canvas]
-        │                 │
-        │                 ├── [section.cinematic-banner] (Mission Hub Hero Strip)
-        │                 │
-        │                 ├── [section.kpi-grid (4-Column Metrics Cards)]
-        │                 │     ├── Card 1: Active Agent Swarms (Sparklines)
-        │                 │     ├── Card 2: Synapse Latency (Mini Gauge)
-        │                 │     ├── Card 3: Token Throughput (Pulse Line)
-        │                 │     └── Card 4: Security Integrity (Quantum Dots)
-        │                 │
-        │                 └── [div.main-widgets-grid (2fr 1fr Asymmetric Grid)]
-        │                       ├── Widget 1: Neural Load Bar Spectrum (Pure CSS)
-        │                       ├── Widget 2: Cluster Core Allocation (Radial SVG Gauges)
-        │                       ├── Widget 3: Active AI Swarm Cards (Aether, Chronos...)
-        │                       ├── Widget 4: Cinematic Terminal Console (Interactive STDOUT)
-        │                       ├── Widget 5: Cluster Topology & Soundwave Equalizer
-        │                       └── Widget 6: Autonomous Action Hub (Trigger Buttons)
-        │
-        ├── [div.modal-backdrop (Emergency Elevation Modal)]
-        └── [div.toast-container (Asynchronous Feedback Toasts)]
+        └── [<div class="notepad-container">] (Max-width: 720px, white card)
+              │
+              ├── [<header class="app-header">]
+              │     ├── [div.header-top] -> [h1 "FocusFlow"] + [span "GRIET • SL LAB"]
+              │     └── [p "Daily Student Task Tracker & Study Dashboard"]
+              │
+              └── [<main class="app-content">]
+                    │
+                    ├── [<section class="timer-section">]
+                    │     └── [div.timer-card]
+                    │           ├── [div.timer-info] (Focus session & subject name)
+                    │           ├── [div.timer-display] (25:00 digits + Pomodoro tag)
+                    │           └── [div.timer-controls] (Start, Pause, Reset buttons)
+                    │
+                    ├── [<section class="add-task-section">]
+                    │     └── [<form class="task-form">]
+                    │           ├── [<input type="text" placeholder="...">]
+                    │           └── [<button "+ Add Task">]
+                    │
+                    ├── [<section class="task-filter-section">]
+                    │     ├── [div.filter-group] (All, Pending, Completed tabs)
+                    │     └── [span.filter-counter] ("3 tasks remaining today")
+                    │
+                    ├── [<section class="task-list-section">]
+                    │     └── [<ul class="task-list">]
+                    │           ├── [<li class="task-item">] (Task 1: SL Lab Micro Project)
+                    │           ├── [<li class="task-item">] (Task 2: Practice Flexbox)
+                    │           ├── [<li class="task-item">] (Task 3: Prepare Viva Prep)
+                    │           ├── [<li class="task-item task-completed">] (Task 4: Done)
+                    │           └── [<li class="task-item task-completed">] (Task 5: Done)
+                    │
+                    └── [<section class="progress-section">]
+                          ├── [div.progress-labels] (Completion text + 40%)
+                          └── [div.progress-bar-container] -> [div.progress-bar-fill]
 ```
 
-### 8.2 User Interaction & Event Dispatch Flowchart
+### 7.2 User Visual Interaction Flow
 ```text
-               +----------------------------------+
-               |     User Launches Dashboard      |
-               +----------------------------------+
+           +-----------------------------------------+
+           | User Opens FocusFlow in Web Browser     |
+           +-----------------------------------------+
                                 |
                                 v
-               +----------------------------------+
-               | Parse HTML5 & Construct DOM Tree |
-               +----------------------------------+
+           +-----------------------------------------+
+           | Browser Loads HTML & Applies styles.css |
+           +-----------------------------------------+
                                 |
                                 v
-               +----------------------------------+
-               | Evaluate styles.css Custom Props |
-               |     Compile GPU Shaders & Blur   |
-               +----------------------------------+
+           +-----------------------------------------+
+           | User Views Study Timer & Focus Subject  |
+           +-----------------------------------------+
                                 |
                                 v
-         +----------------------------------------------+
-         |     Attach Vanilla JavaScript Event Binders  |
-         +----------------------------------------------+
+           +-----------------------------------------+
+           | User Views Daily Task List & Priorities |
+           +-----------------------------------------+
                                 |
        +------------------------+------------------------+
-       |                        |                        |
-       v                        v                        v
-[User Inputs Command]   [User Clicks Timeframe]   [User Clicks Override]
-       |                        |                        |
-       v                        v                        v
-[Evaluate Directive]    [Fetch Preset Array]     [Remove 'hidden' from]
-  (e.g., 'scan')          (1H, 6H, 12H, 24H)     [Modal Backdrop DOM  ]
-       |                        |                        |
-       v                        v                        v
-[Append Color-Coded]    [Update CSS Variable]    [Display Glassmorphic]
-[STDOUT Log to DOM ]    [--val on Bar Columns]   [Elevation Dialogue  ]
-       |                        |                        |
-       v                        v                        v
-[Auto-scroll Terminal]  [Smooth Height Trans]    [Commit Radio State  ]
-       |                        |                        |
+       |                                                 |
+       v                                                 v
+[Check Completed Task]                        [Type in New Task Box]
+       |                                                 |
+       v                                                 v
+[Checkbox Checked & Strikethrough]            [Click '+ Add Task' Button]
+       |                                                 |
        +------------------------+------------------------+
                                 |
                                 v
-               +----------------------------------+
-               | Dispatch Asynchronous UI Toast  |
-               |     Update Live Telemetry Clock  |
-               +----------------------------------+
+           +-----------------------------------------+
+           | Observe Visual Progress Bar & Summary   |
+           +-----------------------------------------+
 ```
 
 ---
 
-## 9. SOURCE CODE REFERENCE & ARCHITECTURE
+## 8. SOURCE CODE
 
-The project codebase is partitioned into three decoupled, clean source files adhering to strict separation of concerns:
+### 8.1 HTML Structure (`index.html`)
+*(Paste the complete `index.html` file content here during spiral binding).*
 
-### 9.1 `index.html` (Semantic Ontology)
-*Location:* `index.html`  
-*Lines of Code:* ~450 lines  
-*Role:* Defines semantic sectioning elements (`<aside>`, `<header>`, `<main>`, `<section>`, `<article>`, `<nav>`), SVG vector geometry for iconography, accessible ARIA attributes (`aria-label`, `aria-modal`, `role="dialog"`), and structural hierarchy.
+```html
+<!-- Complete index.html source code placeholder -->
+<!-- Ref: See project index.html file in repository -->
+```
 
-### 9.2 `styles.css` (Visual Design Tokens, Grid & Animation System)
-*Location:* `styles.css`  
-*Lines of Code:* ~650 lines  
-*Role:* Declares custom properties (`--bg-primary`, `--accent-cyan`), CSS Grid rules for dashboard layout, glassmorphic filters, pure CSS bar charts, circular SVG stroke math, responsive media query breakpoints, and hardware-accelerated keyframe animation sequences.
+### 8.2 CSS Stylesheet (`styles.css`)
+*(Paste the complete `styles.css` file content here during spiral binding).*
 
-### 9.3 `script.js` (Deterministic Interactivity & Telemetry Simulation)
-*Location:* `script.js`  
-*Lines of Code:* ~280 lines  
-*Role:* Manages UTC clock timers, terminal command evaluation, DOM manipulation for real-time log appending, CSS property updating (`style.setProperty('--val', ...)`), modal visibility toggling, and toast notification instantiation.
-
-*(Note: During final spiral binding, paste the exact contents of `index.html`, `styles.css`, and `script.js` into this section or reference the provided project repository files).*
-
----
-
-## 10. OUTPUT & VISUAL VERIFICATION SPECIFICATIONS
-
-When demonstrating or photographing the system for project assessment, document the following five distinct operational states:
-
-### 10.1 Screenshot 1: Macro Command Center Overview
-- **Visual Description:** Full view of the widescreen ($1920 \times 1080$) dashboard showing the sticky frosted sidebar on the left, the top HUD header with the synchronized UTC live clock, the hero directive banner, four luminous KPI cards, and the six primary widgets arranged in the asymmetric grid.
-- **Key Visual Elements:** Ambient cyan and violet blur reflections illuminating the background; crisp contrast between glowing typography and deep obsidian cards.
-
-### 10.2 Screenshot 2: Pure CSS Neural Load Spectrum & Hover States
-- **Visual Description:** Zoomed focus on the Neural Load & Inference Spectrum widget. Demonstrates the 12 vertical gradient bars. One bar is actively hovered, showcasing the sub-pixel upward transform, glowing drop-shadow flare, and floating tooltip displaying interval timestamp and percentage load.
-- **Key Visual Elements:** CSS-driven gradient fills (`#3b82f6` to `#8a2be2` with `#00f5d4` peaks); active time filter pill highlighted in cyber cyan.
-
-### 10.3 Screenshot 3: Interactive Terminal Stream & Command Execution
-- **Visual Description:** Close-up of the raw terminal widget displaying active command inputs. The command `scan` has just been executed, resulting in syntax-highlighted response logs (`SCAN_INIT`, `SWARM_CONSENSUS`) in emerald green and sky blue text.
-- **Key Visual Elements:** macOS-style terminal window controls (red, yellow, green dots); terminal prompt symbol (`nexus://agent-shell >`); automatic scroll position anchored to the newest log line.
-
-### 10.4 Screenshot 4: Cluster Core Allocation & Radial Gauges
-- **Visual Description:** Detailed view of the Hardware Gauges widget. Highlights the two circular gauges displaying 86% H100 VRAM allocation and 54% KV Cache utilization alongside multi-colored horizontal breakdown bars.
-- **Key Visual Elements:** Crisp SVG arc rendering with neon stroke drop-shadows; percentage typography centered within the circular track.
-
-### 10.5 Screenshot 5: Glassmorphic Override Protocol Modal Active
-- **Visual Description:** View with the Emergency Override Protocol modal dialogue open. The background dashboard is blurred and dimmed by the backdrop filter overlay (`backdrop-filter: blur(12px)`). The modal card features custom neon radio selectors, a throttle slider at 85%, and glowing action buttons.
-- **Key Visual Elements:** Frosted glass depth effect; toast notification visible in the lower right corner confirming elevation protocol status.
-
----
-
-## 11. IN-DEPTH TECHNICAL EXPLANATION (CSS & LAYOUT MECHANICS)
-
-### 11.1 CSS Grid Architecture & Fractional Sizing
-The layout foundation relies on CSS Grid rather than traditional floats or inline-block workarounds:
 ```css
-.main-widgets-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 1.5rem;
-}
+/* Complete styles.css source code placeholder */
+/* Ref: See project styles.css file in repository */
 ```
-- **Fractional Units (`fr`):** The `2fr 1fr` configuration dynamically allocates two-thirds of the available horizontal space to data-dense widgets (the 12-hour bar spectrum, swarm cards, and topology matrix) and one-third to narrow operational widgets (radial gauges, terminal console, and quick actions).
-- **Responsive Track Shifting:** When the browser viewport drops below $1200\text{px}$, media queries dynamically re-declare `.main-widgets-grid { grid-template-columns: 1fr; }`, collapsing the layout into a clean single-column sequence without breaking component proportions.
-
-### 11.2 The Mathematics of Glassmorphism
-The glassmorphism effect is created through the interplay of three distinct optical layers:
-1. **Color Attenuation Layer:** `background: rgba(16, 23, 41, 0.65)` provides a tinted dark baseline that guarantees minimum WCAG AAA contrast ratios for foreground white text.
-2. **Convolution Blur Shader:** `backdrop-filter: blur(18px)` instructs the browser compositing pipeline to apply a Gaussian blur kernel over any underlying elements (specifically the animated ambient glow orbs).
-3. **Sub-Pixel Fresnel Boundary:** `border: 1px solid rgba(255, 255, 255, 0.08)` simulates light scattering off the edge of a polished pane of physical glass.
-
-### 11.3 Radial Meter Math via SVG Stroke Dash Array
-The circular meters within Widget 2 are rendered purely via vector math without external charting libraries. The circle has a defined radius $r = 48\text{px}$. The circumference $C$ of the circle is calculated as:
-$$C = 2 \times \pi \times r = 2 \times 3.14159 \times 48 \approx 301.59\text{px}$$
-In CSS, this circumference is assigned to `stroke-dasharray`:
-```css
-.radial-val {
-  stroke-dasharray: 301.59;
-  stroke-dashoffset: calc(301.59 - (301.59 * var(--percent)) / 100);
-}
-```
-When `--percent` is set to $86$, the browser calculates an offset of:
-$$\text{offset} = 301.59 - \frac{301.59 \times 86}{100} = 301.59 - 259.37 = 42.22\text{px}$$
-This leaves exactly $86\%$ of the circular path illuminated, smoothly animated through `transition: stroke-dashoffset 1s ease-in-out`.
-
-### 11.4 Hardware-Accelerated Keyframe Animations
-To ensure that ambient orbs and sound equalizers run at continuous $60\text{ FPS}$ without causing CPU layout recalculations or paint thrashing, all keyframe animations exclusively manipulate composited CSS properties: `transform` (scale, translate) and `opacity`.
-
-For the sound-wave equalizer:
-```css
-@keyframes soundWave {
-  0% { transform: scaleY(0.3); opacity: 0.5; }
-  100% { transform: scaleY(1.1); opacity: 1; filter: drop-shadow(0 0 5px var(--accent-cyan)); }
-}
-```
-Because `transform: scaleY()` executes entirely in GPU memory, running 16 simultaneous equalizer bars introduces negligible CPU utilization.
 
 ---
 
-## 12. FUTURE ENHANCEMENTS
+## 9. OUTPUT
 
-While Nexus stands as a fully operational, high-performance UI working model, the architectural foundation was designed to accommodate extensive future upgrades:
+When printing screenshots for the final lab record, take and mount the following three clear screenshots:
 
-1. **Full-Duplex WebSocket Integration:** Connect the terminal console and telemetry metrics to a live FastAPI or Node.js WebSocket backend to consume real-time inference telemetry from actual local LLMs (e.g., Ollama, vLLM, or Hugging Face TGI).
-2. **Hardware-Accelerated 3D Topology (Three.js / WebGL):** Replace the 2D matrix grid with an interactive 3D particle constellation rendering inter-agent tensor routing in real-time space with orbit controls.
-3. **Audio Synthesis & Voice Synthesis HUD:** Integrate the Web Audio API and SpeechRecognition API to allow operators to issue voice commands (e.g., *"Nexus, run diagnostic scan"*) with futuristic synthetic voice acknowledgments.
-4. **PWA & Offline Service Workers:** Implement cache-first service workers and Web App Manifests to enable offline deployment as a standalone desktop or kiosk application.
+### 9.1 Screenshot 1: Full Desktop Notepad View
+- **Description:** Shows the entire FocusFlow user interface centered on a clean desktop browser window ($1920 \times 1080$).
+- **Visible Elements:** The soft grey page background, the top header with the GRIET SL LAB badge, the Pomodoro study timer displaying "25:00", the task input bar, the five daily task items with subject badges, the 40% progress bar, and the footer.
 
----
+### 9.2 Screenshot 2: Daily Tasks & Completed States Close-Up
+- **Description:** A focused view of the task list section.
+- **Visible Elements:** Clear visual distinction between pending tasks (white background with colored priority tags) and completed tasks (strikethrough text with light green "Done" badges and checked checkboxes).
 
-## 13. PROJECT SUCCESS SUMMARY
-
-The Nexus micro-project successfully satisfies all pedagogical and engineering benchmarks established by the JNTUH/GRIET curriculum for the Scripting Languages Laboratory:
-- **Zero Third-Party Library Bloat:** Complete design system realized using vanilla HTML5 and CSS3.
-- **Fluid Responsiveness:** Validated across desktop, laptop, tablet, and mobile viewport profiles.
-- **High-Fidelity Aesthetics:** Implements modern design industry conventions (Glassmorphism, Dark Mode, Micro-interactions).
-- **Execution Stability:** Validated with zero syntax errors, sub-second load times, and fluid 60 FPS animation profiles.
+### 9.3 Screenshot 3: Mobile Responsive Layout View
+- **Description:** Shows how the interface neatly reflows on a mobile screen width (tested via Browser DevTools at 375px width).
+- **Visible Elements:** The task items gracefully stacking checkbox labels above subject badges, the input field stacking above the "+ Add Task" button, and timer controls wrapping neatly.
 
 ---
 
-## 14. CONCLUSION
+## 10. EXPLANATION
 
-The **Nexus: Cinematic AI Agent Dashboard** micro-project illustrates the transformative power of modern CSS3 and semantic HTML5 in engineering high-density, mission-critical user interfaces. By moving beyond rigid, boilerplate UI templates and mastering the low-level primitives of CSS Grid, Flexbox, custom design token architectures, and GPU-driven keyframes, developers can construct web applications that rival native desktop interfaces in both visual elegance and computational performance. 
+### 10.1 Semantic HTML5 Elements
+Instead of using generic `<div>` tags everywhere, FocusFlow utilizes semantic HTML5 tags:
+- `<header>`: Encloses the application branding, title, and institutional identification.
+- `<main>`: Contains the primary user interface sections.
+- `<section>`: Divides the application logically into the Timer, Add Task, Filter, Task List, and Progress sections.
+- `<ul>` and `<li>`: Used for the task checklist, representing a true list of items for accessibility and clean CSS targeting.
+- `<label>` and `<input>`: Provides standard form input accessibility, allowing users to toggle checkboxes by clicking directly on the task text.
 
-This project solidifies fundamental scripting principles, preparing undergraduate engineers for modern frontend architecture challenges in cloud computing, artificial intelligence telemetry, and enterprise software engineering.
+### 10.2 CSS Box Model in Practice
+The CSS Box Model is the foundation of this project's layout:
+1. **Content:** The actual text, timer digits, and icons.
+2. **Padding:** Generous internal whitespace (e.g., `padding: 28px 32px` in `.app-content`) ensures components do not feel cramped.
+3. **Borders:** Thin, subtle borders (`border: 1px solid #e2e8f0`) provide clean structure without looking harsh.
+4. **Margins:** Controlled external spacing (e.g., `margin-bottom: 24px`) keeps sections clearly separated.
+
+### 10.3 CSS Flexbox Alignment
+CSS Flexbox (`display: flex`) is used throughout FocusFlow for one-dimensional layouts:
+- **Horizontal Centering:**
+  ```css
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  ```
+- **Space-Between Alignment in Task Rows:**
+  ```css
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ```
+  This automatically pushes the checkbox and task title to the far left, while anchoring the subject tags and delete button to the far right.
+- **Flexible Form Input:**
+  ```css
+  .task-input {
+    flex: 1;
+  }
+  ```
+  By setting `flex: 1`, the input field dynamically expands to fill all remaining horizontal room, regardless of the screen width.
 
 ---
 
-## 15. REFERENCES & CITATIONS
+## 11. FUTURE ENHANCEMENT
 
-1. **World Wide Web Consortium (W3C):** *CSS Grid Layout Module Level 2*, W3C Candidate Recommendation, 2023. [https://www.w3.org/TR/css-grid-2/](https://www.w3.org/TR/css-grid-2/)
-2. **World Wide Web Consortium (W3C):** *CSS Flexible Box Layout Module Level 1*, W3C Recommendation. [https://www.w3.org/TR/css-flexbox-1/](https://www.w3.org/TR/css-flexbox-1/)
-3. **MDN Web Docs:** *CSS Custom Properties (Variables)*, Mozilla Developer Network, 2024. [https://developer.mozilla.org/en-US/docs/Web/CSS/--*](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
-4. **MDN Web Docs:** *Backdrop-filter CSS specification and browser support*, Mozilla Developer Network. [https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)
-5. **Google Chrome Developers:** *Rendering Performance: High-Performance Animations and GPU Compositing*, Web.dev Performance Guides, 2024.
-6. **Nielsen Norman Group:** *Dashboards: Making Complex Data Visual and Actionable*, User Experience Research Reports.
-7. **JNTUH Curriculum Guidelines:** *Laboratory Manual for Scripting Languages (IT/CSE)*, Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad.
+FocusFlow provides a solid structural and visual base. Future enhancements can extend its capabilities:
+
+1. **Adding JavaScript Interactivity:**
+   - Implement functional JavaScript to make the Pomodoro timer actually countdown from 25:00 to 00:00 with start, pause, and reset functionality.
+   - Dynamically append new task items to the list when the user submits the form.
+   - Allow deleting tasks and toggling completed status dynamically.
+2. **Local Storage Persistence (`localStorage`):**
+   - Store tasks in the browser's `localStorage` so tasks remain saved even after refreshing the page or closing the browser.
+3. **Audio Notifications:**
+   - Play a gentle chime when a 25-minute study session finishes.
+4. **Dark Mode Toggle:**
+   - Add a simple button to switch between the current physical notepad theme and a dark study theme.
+
+---
+
+## 12. PROJECT SUCCESS SUMMARY
+
+The FocusFlow micro-project successfully satisfies all curriculum objectives for the Scripting Languages Laboratory:
+- **Clean, Understandable Code:** The HTML and CSS files are thoroughly commented, making them easy to understand and explain during oral viva examinations.
+- **Visual Polish:** Achieves a modern, distraction-free aesthetic comparable to popular student productivity tools.
+- **Zero External Dependencies:** Built with 100% native HTML5 and CSS3, requiring no external frameworks, CDNs, or complex build setups.
+- **Complete Responsiveness:** Thoroughly tested and verified across desktop, tablet, and smartphone screen dimensions.
+
+---
+
+## 13. CONCLUSION
+
+The **FocusFlow: A Minimalist Student Task Tracker UI** micro-project successfully demonstrates how fundamental web technologies—semantic HTML5 and standard CSS3—can be used to build a clean, purposeful, and visually appealing web interface. 
+
+By focusing on clean layout design, thoughtful whitespace, readable typography, and the versatile power of CSS Flexbox, this project highlights that complex frameworks are not always necessary to solve everyday student productivity problems. 
+
+This micro-project has provided practical, hands-on experience in frontend styling, box-model mechanics, and responsive design, establishing a strong foundation for future web development coursework.
+
+---
+
+## 14. REFERENCES
+
+1. **Mozilla Developer Network (MDN Web Docs):** *HTML5 Semantic Elements and Document Structure*. [https://developer.mozilla.org/en-US/docs/Glossary/Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
+2. **Mozilla Developer Network (MDN Web Docs):** *Basic Concepts of Flexbox*. [https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+3. **World Wide Web Consortium (W3C):** *CSS Flexible Box Layout Module Level 1*. [https://www.w3.org/TR/css-flexbox-1/](https://www.w3.org/TR/css-flexbox-1/)
+4. **W3Schools Online Web Tutorials:** *CSS Box Model, Borders, Margin, and Padding*. [https://www.w3schools.com/css/css_boxmodel.asp](https://www.w3schools.com/css/css_boxmodel.asp)
+5. **GRIET Academic Regulations & Lab Manual:** *Scripting Languages Laboratory (SL LAB)*, Department of CSE & IT, Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad.
